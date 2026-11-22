@@ -17,26 +17,26 @@
     42.65,
     18.09
   ],
-  "date": "2026-06-29",
-  "days": 24,
-  "distanceKm": 2200,
+  "date": "2026-06-28",
+  "days": 26,
+  "distanceKm": 2700,
   "elevationGainM": 0,
   "highestPointM": 520,
-  "nights": 23,
+  "nights": 25,
   "nightsOutside": 0,
   "palette": "adriatic",
   "stats": [
     {
       "l": "Distance",
-      "v": "~2,200 km"
+      "v": "~2,700 km"
     },
     {
       "l": "Countries",
       "v": "5"
     },
     {
-      "l": "Stops",
-      "v": "10"
+      "l": "Days",
+      "v": "26"
     },
     {
       "l": "Got around by",
@@ -104,29 +104,120 @@
   "elevation": [],
   "chapters": [
     {
-      "label": "Week 1 · Jun 29 – Jul 5",
-      "heading": "Split and the islands",
+      "label": "Day 1 · Sun, Jun 28",
+      "heading": "Wheels up",
       "bullets": [
-        "Started in Split, Croatia",
-        "Boat cruise around the nearby islands",
-        "Back to Split",
-        "An afternoon on Hvar"
+        "Overnight flight to Munich"
+      ]
+    },
+    {
+      "label": "Day 2 · Mon, Jun 29",
+      "heading": "Into Split",
+      "bullets": [
+        "Connecting flight from Munich to Split",
+        "Checked into an apartment in Split"
+      ]
+    },
+    {
+      "label": "Day 3 · Tue, Jun 30",
+      "heading": "Split, then out to sea",
+      "bullets": [
+        "Early morning in Split",
+        "Up the coast to Tribunj Marina",
+        "Four-day sailing trip on a catamaran starts at 4 pm"
       ],
       "image": {
         "src": "/photos/balkans/split-bay.jpg",
         "alt": "The bay outside Split with mountains behind",
-        "caption": "Split and the islands."
+        "caption": "Split, early morning."
       }
     },
     {
-      "label": "Week 2 · Jul 6 – 12",
-      "heading": "Dubrovnik into the Balkans",
+      "label": "Day 4 · Wed, Jul 1",
+      "heading": "On the catamaran",
       "bullets": [
-        "Boat down the coast to Dubrovnik (Jul 6)",
-        "Car inland to Sarajevo (Jul 8)",
-        "Day trip to Travnik and Jajce, then on to Mostar (Jul 9)",
-        "Herzegovina tour: Kravice Waterfalls, Počitelj and Blagaj (Jul 10)",
-        "Drove on to Kotor, Montenegro (Jul 11)"
+        "Day two of the sailing trip",
+        "Sailing the islands off the Dalmatian coast"
+      ]
+    },
+    {
+      "label": "Day 5 · Thu, Jul 2",
+      "heading": "Still sailing",
+      "bullets": [
+        "Day three of the sailing trip",
+        "Another night aboard"
+      ]
+    },
+    {
+      "label": "Day 6 · Fri, Jul 3",
+      "heading": "Back on land",
+      "bullets": [
+        "Sailing trip ends at Tribunj at 5 pm",
+        "Back to Split for the night"
+      ]
+    },
+    {
+      "label": "Day 7 · Sat, Jul 4",
+      "heading": "Split",
+      "bullets": [
+        "A free day back in Split"
+      ]
+    },
+    {
+      "label": "Day 8 · Sun, Jul 5",
+      "heading": "Hvar, then Dubrovnik",
+      "bullets": [
+        "10 am fast ferry from Split to Hvar",
+        "The afternoon on Hvar",
+        "4:45 pm boat down the coast to Dubrovnik"
+      ],
+      "image": {
+        "src": "/photos/balkans/hvar-cove.jpg",
+        "alt": "A turquoise cove on Hvar with sailboats at anchor",
+        "caption": "Hvar."
+      }
+    },
+    {
+      "label": "Day 9 · Mon, Jul 6",
+      "heading": "Dubrovnik",
+      "bullets": [
+        "A day in Dubrovnik's old town",
+        "Golden hour from the hill above the city"
+      ],
+      "image": {
+        "src": "/photos/balkans/dubrovnik-walls.jpg",
+        "alt": "Dubrovnik's stone city walls above the sea",
+        "caption": "Dubrovnik's walls."
+      }
+    },
+    {
+      "label": "Day 10 · Tue, Jul 7",
+      "heading": "Across the border",
+      "bullets": [
+        "Drove out of Dubrovnik through Neum",
+        "Up through Herzegovina to Sarajevo"
+      ]
+    },
+    {
+      "label": "Day 11 · Wed, Jul 8",
+      "heading": "Sarajevo",
+      "bullets": [
+        "Day trip around Sarajevo with a driver",
+        "The city from the hills above the valley"
+      ],
+      "image": {
+        "src": "/photos/balkans/sarajevo.jpg",
+        "alt": "Sarajevo filling its valley, seen from the hills",
+        "caption": "Sarajevo"
+      }
+    },
+    {
+      "label": "Day 12 · Thu, Jul 9",
+      "heading": "Travnik, Jajce, Mostar",
+      "bullets": [
+        "Travnik: the fortress, old town and Painted Mosque",
+        "Jajce: the waterfall and the fortress",
+        "On to Mostar for the night"
       ],
       "image": {
         "src": "/photos/balkans/mostar.jpg",
@@ -135,13 +226,96 @@
       }
     },
     {
-      "label": "Week 3 · Jul 13 – 19",
-      "heading": "Tirana, Thessaloniki, Santorini",
+      "label": "Day 13 · Fri, Jul 10",
+      "heading": "Herzegovina loop",
       "bullets": [
-        "Tirana, Albania (Jul 13)",
-        "Drove across to Thessaloniki, Greece (Jul 15)",
-        "Flew to Santorini (Jul 16)",
-        "The caldera and Red Beach"
+        "Day tour out of Mostar",
+        "Blagaj",
+        "Počitelj",
+        "Kravice Waterfalls",
+        "Back to Mostar"
+      ]
+    },
+    {
+      "label": "Day 14 · Sat, Jul 11",
+      "heading": "Mostar to Kotor",
+      "bullets": [
+        "Drove south into Montenegro",
+        "Evening in Kotor's old town"
+      ],
+      "image": {
+        "src": "/photos/balkans/kotor.jpg",
+        "alt": "Kotor's old town with mountains rising behind",
+        "caption": "Kotor."
+      }
+    },
+    {
+      "label": "Day 15 · Sun, Jul 12",
+      "heading": "Kotor",
+      "bullets": [
+        "A full day in Kotor"
+      ]
+    },
+    {
+      "label": "Day 16 · Mon, Jul 13",
+      "heading": "Into Albania",
+      "bullets": [
+        "Drove from Kotor to Tirana",
+        "Evening in Tirana"
+      ],
+      "image": {
+        "src": "/photos/balkans/tirana.jpg",
+        "alt": "Tirana's skyline with the sun low behind",
+        "caption": "Tirana"
+      }
+    },
+    {
+      "label": "Day 17 · Tue, Jul 14",
+      "heading": "Tirana to Thessaloniki",
+      "bullets": [
+        "Long drive across Albania into Greece",
+        "Arrived in Thessaloniki"
+      ]
+    },
+    {
+      "label": "Day 18 · Wed, Jul 15",
+      "heading": "Thessaloniki",
+      "bullets": [
+        "A day in Thessaloniki",
+        "Evening over the rooftops and the sea"
+      ],
+      "image": {
+        "src": "/photos/balkans/thessaloniki.jpg",
+        "alt": "Thessaloniki's rooftops running down to the sea",
+        "caption": "Thessaloniki."
+      }
+    },
+    {
+      "label": "Day 19 · Thu, Jul 16",
+      "heading": "Flight to Santorini",
+      "bullets": [
+        "Evening flight from Thessaloniki to Santorini",
+        "Staying in Perissa"
+      ]
+    },
+    {
+      "label": "Day 20 · Fri, Jul 17",
+      "heading": "Beach day",
+      "bullets": [
+        "Beach day on Santorini",
+        "Red Beach"
+      ],
+      "image": {
+        "src": "/photos/balkans/santorini-red-beach.jpg",
+        "alt": "Red cliffs above a clear cove",
+        "caption": "Red Beach, Santorini"
+      }
+    },
+    {
+      "label": "Day 21 · Sat, Jul 18",
+      "heading": "The caldera",
+      "bullets": [
+        "Morning above the caldera"
       ],
       "image": {
         "src": "/photos/balkans/santorini-caldera.jpg",
@@ -150,18 +324,45 @@
       }
     },
     {
-      "label": "Week 4 · Jul 20 – 22",
-      "heading": "Ferry to Athens, then home",
+      "label": "Day 22 · Sun, Jul 19",
+      "heading": "Kayaking",
       "bullets": [
-        "Ferry from Santorini to Athens",
-        "The Acropolis and the Odeon of Herodes Atticus (Jul 21)",
-        "Flew home"
+        "Sea kayaking trip with a picnic lunch"
+      ]
+    },
+    {
+      "label": "Day 23 · Mon, Jul 20",
+      "heading": "Last day on Santorini",
+      "bullets": [
+        "Returned the rental car"
+      ]
+    },
+    {
+      "label": "Day 24 · Tue, Jul 21",
+      "heading": "Ferry to Athens",
+      "bullets": [
+        "Ferry from Santorini to Piraeus",
+        "Evening at the Acropolis"
       ],
       "image": {
         "src": "/photos/balkans/acropolis-erechtheion.jpg",
         "alt": "The Erechtheion on the Acropolis in evening light",
         "caption": "The Acropolis"
       }
+    },
+    {
+      "label": "Day 25 · Wed, Jul 22",
+      "heading": "Athens",
+      "bullets": [
+        "Last full day in Athens"
+      ]
+    },
+    {
+      "label": "Day 26 · Thu, Jul 23",
+      "heading": "Home",
+      "bullets": [
+        "Flew home via Montréal"
+      ]
     }
   ],
   "gallery": [
@@ -171,82 +372,437 @@
       "caption": "Split"
     },
     {
-      "src": "/photos/balkans/sarajevo.jpg",
-      "alt": "Sarajevo filling its valley, seen from the hills",
-      "caption": "Sarajevo"
-    },
-    {
       "src": "/photos/balkans/kotor-cat.jpg",
       "alt": "A ginger cat asleep on a tree branch",
       "caption": "One of Kotor's cats"
     },
     {
-      "src": "/photos/balkans/tirana.jpg",
-      "alt": "Tirana's skyline with the sun low behind",
-      "caption": "Tirana"
-    },
-    {
-      "src": "/photos/balkans/santorini-red-beach.jpg",
-      "alt": "Red cliffs above a clear cove",
-      "caption": "Red Beach, Santorini"
-    },
-    {
       "src": "/photos/balkans/athens-odeon.jpg",
       "alt": "The Odeon of Herodes Atticus below the Acropolis",
       "caption": "Athens"
-    },
-    {
-      "src": "/photos/balkans/hvar-cove.jpg",
-      "alt": "A turquoise cove on Hvar with sailboats at anchor",
-      "caption": "Hvar."
-    },
-    {
-      "src": "/photos/balkans/dubrovnik-walls.jpg",
-      "alt": "Dubrovnik's stone city walls above the sea",
-      "caption": "Dubrovnik's walls."
-    },
-    {
-      "src": "/photos/balkans/kotor.jpg",
-      "alt": "Kotor's old town with mountains rising behind",
-      "caption": "Kotor."
-    },
-    {
-      "src": "/photos/balkans/thessaloniki.jpg",
-      "alt": "Thessaloniki's rooftops running down to the sea",
-      "caption": "Thessaloniki."
     }
   ],
   "legs": [
     {
+      "mode": "car",
+      "path": [
+        [
+          43.507326,
+          16.439768
+        ],
+        [
+          43.504934,
+          16.454951
+        ],
+        [
+          43.511969,
+          16.484722
+        ],
+        [
+          43.518516,
+          16.481204
+        ],
+        [
+          43.528486,
+          16.492253
+        ],
+        [
+          43.529442,
+          16.509544
+        ],
+        [
+          43.535283,
+          16.513095
+        ],
+        [
+          43.546205,
+          16.535097
+        ],
+        [
+          43.557883,
+          16.538128
+        ],
+        [
+          43.564743,
+          16.530791
+        ],
+        [
+          43.57308,
+          16.534164
+        ],
+        [
+          43.583996,
+          16.562498
+        ],
+        [
+          43.593936,
+          16.575373
+        ],
+        [
+          43.60079,
+          16.564468
+        ],
+        [
+          43.595731,
+          16.514486
+        ],
+        [
+          43.597728,
+          16.49347
+        ],
+        [
+          43.5865,
+          16.453906
+        ],
+        [
+          43.588544,
+          16.410053
+        ],
+        [
+          43.597271,
+          16.37391
+        ],
+        [
+          43.595663,
+          16.348788
+        ],
+        [
+          43.618453,
+          16.272814
+        ],
+        [
+          43.619637,
+          16.246295
+        ],
+        [
+          43.637241,
+          16.211717
+        ],
+        [
+          43.658941,
+          16.191256
+        ],
+        [
+          43.664403,
+          16.171673
+        ],
+        [
+          43.678184,
+          16.147206
+        ],
+        [
+          43.68353,
+          16.11804
+        ],
+        [
+          43.684646,
+          16.052741
+        ],
+        [
+          43.708855,
+          15.993609
+        ],
+        [
+          43.716527,
+          15.989224
+        ],
+        [
+          43.708406,
+          15.974465
+        ],
+        [
+          43.719354,
+          15.949216
+        ],
+        [
+          43.725618,
+          15.943624
+        ],
+        [
+          43.732997,
+          15.945056
+        ],
+        [
+          43.753549,
+          15.910705
+        ],
+        [
+          43.754284,
+          15.898292
+        ],
+        [
+          43.745657,
+          15.893025
+        ],
+        [
+          43.756837,
+          15.877947
+        ],
+        [
+          43.762568,
+          15.856797
+        ],
+        [
+          43.757981,
+          15.828765
+        ],
+        [
+          43.764702,
+          15.812055
+        ],
+        [
+          43.761278,
+          15.784053
+        ],
+        [
+          43.765139,
+          15.774569
+        ],
+        [
+          43.757824,
+          15.76787
+        ],
+        [
+          43.759263,
+          15.753268
+        ],
+        [
+          43.752253,
+          15.746349
+        ]
+      ]
+    },
+    {
       "mode": "boat",
       "path": [
         [
-          43.503,
-          16.44
+          43.752,
+          15.746
         ],
         [
-          43.47,
-          16.42
+          43.74,
+          15.72
         ],
         [
-          43.39,
-          16.31
+          43.7,
+          15.7
         ],
         [
-          43.33,
-          16.44
+          43.66,
+          15.62
         ],
         [
-          43.255,
-          16.65
+          43.72,
+          15.5
         ],
         [
-          43.36,
-          16.55
+          43.78,
+          15.38
         ],
         [
-          43.503,
-          16.44
+          43.83,
+          15.47
+        ],
+        [
+          43.775,
+          15.6
+        ],
+        [
+          43.76,
+          15.7
+        ],
+        [
+          43.752,
+          15.746
+        ]
+      ]
+    },
+    {
+      "mode": "car",
+      "path": [
+        [
+          43.752253,
+          15.746349
+        ],
+        [
+          43.759263,
+          15.753268
+        ],
+        [
+          43.757824,
+          15.76787
+        ],
+        [
+          43.765139,
+          15.774569
+        ],
+        [
+          43.761278,
+          15.784053
+        ],
+        [
+          43.764702,
+          15.812055
+        ],
+        [
+          43.757981,
+          15.828765
+        ],
+        [
+          43.762568,
+          15.856797
+        ],
+        [
+          43.756837,
+          15.877947
+        ],
+        [
+          43.745657,
+          15.893025
+        ],
+        [
+          43.754284,
+          15.898292
+        ],
+        [
+          43.753549,
+          15.910705
+        ],
+        [
+          43.732997,
+          15.945056
+        ],
+        [
+          43.725618,
+          15.943624
+        ],
+        [
+          43.719354,
+          15.949216
+        ],
+        [
+          43.708406,
+          15.974465
+        ],
+        [
+          43.716527,
+          15.989224
+        ],
+        [
+          43.708855,
+          15.993609
+        ],
+        [
+          43.684646,
+          16.052741
+        ],
+        [
+          43.68353,
+          16.11804
+        ],
+        [
+          43.678184,
+          16.147206
+        ],
+        [
+          43.664403,
+          16.171673
+        ],
+        [
+          43.658941,
+          16.191256
+        ],
+        [
+          43.637241,
+          16.211717
+        ],
+        [
+          43.619637,
+          16.246295
+        ],
+        [
+          43.618453,
+          16.272814
+        ],
+        [
+          43.595663,
+          16.348788
+        ],
+        [
+          43.597271,
+          16.37391
+        ],
+        [
+          43.588544,
+          16.410053
+        ],
+        [
+          43.5865,
+          16.453906
+        ],
+        [
+          43.597728,
+          16.49347
+        ],
+        [
+          43.595731,
+          16.514486
+        ],
+        [
+          43.60079,
+          16.564468
+        ],
+        [
+          43.593936,
+          16.575373
+        ],
+        [
+          43.583996,
+          16.562498
+        ],
+        [
+          43.57308,
+          16.534164
+        ],
+        [
+          43.564743,
+          16.530791
+        ],
+        [
+          43.557883,
+          16.538128
+        ],
+        [
+          43.546205,
+          16.535097
+        ],
+        [
+          43.535283,
+          16.513095
+        ],
+        [
+          43.529442,
+          16.509544
+        ],
+        [
+          43.528486,
+          16.492253
+        ],
+        [
+          43.518516,
+          16.481204
+        ],
+        [
+          43.511969,
+          16.484722
+        ],
+        [
+          43.504934,
+          16.454951
+        ],
+        [
+          43.507326,
+          16.439768
         ]
       ]
     },
@@ -401,32 +957,209 @@
           18.413077
         ],
         [
-          43.878726,
-          18.184007
+          43.854575,
+          18.312005
         ],
         [
-          43.825564,
-          18.093093
+          43.87494,
+          18.294522
         ],
         [
-          43.65504,
-          17.962717
+          43.91169,
+          18.321035
         ],
         [
-          43.692949,
-          17.859373
+          43.94551,
+          18.257394
         ],
         [
-          43.679224,
-          17.776254
+          43.990616,
+          18.223763
         ],
         [
-          43.558199,
-          17.719052
+          44.011203,
+          18.141909
+        ],
+        [
+          44.055745,
+          18.103642
+        ],
+        [
+          44.114355,
+          18.110573
+        ],
+        [
+          44.134431,
+          18.082171
+        ],
+        [
+          44.128402,
+          17.950786
+        ],
+        [
+          44.142414,
+          17.933666
+        ],
+        [
+          44.131262,
+          17.86593
+        ],
+        [
+          44.227003,
+          17.665
+        ],
+        [
+          44.272657,
+          17.514322
+        ],
+        [
+          44.402079,
+          17.384993
+        ],
+        [
+          44.386091,
+          17.365843
+        ],
+        [
+          44.395687,
+          17.340561
+        ],
+        [
+          44.351751,
+          17.318651
+        ],
+        [
+          44.342026,
+          17.268026
+        ],
+        [
+          44.327719,
+          17.245473
+        ],
+        [
+          44.294283,
+          17.250072
+        ],
+        [
+          44.273854,
+          17.285684
+        ],
+        [
+          44.153724,
+          17.370252
+        ],
+        [
+          44.110163,
+          17.430568
+        ],
+        [
+          44.049705,
+          17.440717
+        ],
+        [
+          43.949581,
+          17.545555
+        ],
+        [
+          43.928469,
+          17.603456
+        ],
+        [
+          43.838793,
+          17.58085
+        ],
+        [
+          43.829522,
+          17.624559
+        ],
+        [
+          43.791736,
+          17.623074
+        ],
+        [
+          43.769143,
+          17.674447
+        ],
+        [
+          43.735066,
+          17.677005
+        ],
+        [
+          43.660398,
+          17.762835
+        ],
+        [
+          43.557846,
+          17.719199
+        ],
+        [
+          43.5106,
+          17.748178
+        ],
+        [
+          43.482809,
+          17.810403
         ],
         [
           43.416452,
           17.876478
+        ],
+        [
+          43.343003,
+          17.808
+        ]
+      ]
+    },
+    {
+      "mode": "car",
+      "path": [
+        [
+          43.343003,
+          17.808
+        ],
+        [
+          43.257131,
+          17.885652
+        ],
+        [
+          43.247813,
+          17.837531
+        ],
+        [
+          43.21873,
+          17.825214
+        ],
+        [
+          43.196357,
+          17.781439
+        ],
+        [
+          43.170232,
+          17.785535
+        ],
+        [
+          43.134957,
+          17.730638
+        ],
+        [
+          43.112696,
+          17.704469
+        ],
+        [
+          43.168127,
+          17.62251
+        ],
+        [
+          43.156984,
+          17.607995
+        ],
+        [
+          43.199624,
+          17.574496
+        ],
+        [
+          43.21017,
+          17.676127
         ],
         [
           43.343003,
@@ -709,6 +1442,14 @@
       ]
     },
     {
+      "name": "Tribunj",
+      "coords": [
+        43.752,
+        15.746
+      ],
+      "anchor": "end"
+    },
+    {
       "name": "Hvar",
       "coords": [
         43.172,
@@ -728,6 +1469,21 @@
         43.856,
         18.413
       ]
+    },
+    {
+      "name": "Travnik",
+      "coords": [
+        44.227,
+        17.665
+      ]
+    },
+    {
+      "name": "Jajce",
+      "coords": [
+        44.342,
+        17.268
+      ],
+      "anchor": "end"
     },
     {
       "name": "Mostar",
@@ -760,7 +1516,7 @@
     {
       "name": "Santorini",
       "coords": [
-        36.42,
+        36.36,
         25.43
       ]
     },

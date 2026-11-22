@@ -51,7 +51,7 @@ export function buildMap(a: Adventure, w = 600, h = 520): MapData {
 
   return {
     w, h, land, borders, legs: outLegs,
-    stops: stops.map((s) => { const [x, y] = proj([s.coords[1], s.coords[0]])!; return { name: s.name, x, y, anchor: x > w * 0.7 ? "end" : "start" }; }),
+    stops: stops.map((s) => { const [x, y] = proj([s.coords[1], s.coords[0]])!; return { name: s.name, x, y, anchor: s.anchor ?? (x > w * 0.7 ? "end" : "start") }; }),
   };
 }
 

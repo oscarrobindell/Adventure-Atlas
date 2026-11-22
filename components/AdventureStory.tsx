@@ -30,7 +30,10 @@ export default function AdventureStory({ a, next, map }: { a: Adventure; next: A
     isDive ? { l: "Nights at sea", v: a.nightsOutside } : { l: "Elevation gain", v: `${a.elevationGainM.toLocaleString("en-US")} m` },
   ];
   const shown = a.stats ?? stats;
-  const photos = [...a.chapters.map((c) => c.image), ...a.gallery];
+  const chapterImgs = a.chapters.flatMap((c) => (c.image ? [c.image] : []));
+  const photos = [...chapterImgs, ...a.gallery];
+  const imgIndex = (i: number) => a.chapters.slice(0, i).filter((c) => c.image).length;
+  const daily = a.chapters.length > 12;
 
   return (
     <article style={{ ["--accent" as string]: p.accent }}>
@@ -64,12 +67,12 @@ export default function AdventureStory({ a, next, map }: { a: Adventure; next: A
             <RouteMap map={map} elevation={a.elevation} progress={progress} accent={p.accent} />
           </div>
         </div>
-        <div className="md:col-span-7 md:col-start-6 space-y-40 pb-24">
+        <div className={`md:col-span-7 md:col-start-6 pb-24 ${daily ? "space-y-24" : "space-y-40"}`}>
           {a.chapters.map((c, i) => (
             <section key={i}>
               <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-15% 0px" }} transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}>
                 <p className="font-mono text-xs" style={{ color: p.accent }}>{c.label ?? `Day ${Math.max(1, Math.round((i / Math.max(1, a.chapters.length - 1)) * a.days))} / ${a.days}`}</p>
-                <h2 className="display text-5xl md:text-7xl mt-3">{c.heading}</h2>
+                <h2 className={`display mt-3 ${daily && !c.image ? "text-4xl md:text-5xl" : "text-5xl md:text-7xl"}`}>{c.heading}</h2>
                 {c.body && <p className="text-lg md:text-xl leading-relaxed text-bone/80 mt-6 max-w-xl first-letter:font-display first-letter:text-6xl first-letter:float-left first-letter:mr-2 first-letter:leading-[0.8]">{c.body}</p>}
                 {c.bullets && (
                   <ul className="mt-6 max-w-xl space-y-3">
@@ -81,12 +84,14 @@ export default function AdventureStory({ a, next, map }: { a: Adventure; next: A
                   </ul>
                 )}
               </motion.div>
+              {c.image && (
               <motion.figure className="mt-10" initial={{ clipPath: "inset(12% 12% 12% 12%)" }} whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }} viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}>
-                <button className="block w-full aspect-[16/10] overflow-hidden cursor-zoom-in" onClick={() => lb.open(photos, i)} aria-label={`Open photo: ${c.image.alt}`}>
+                <button className="block w-full aspect-[16/10] overflow-hidden cursor-zoom-in" onClick={() => lb.open(photos, imgIndex(i))} aria-label={`Open photo: ${c.image.alt}`}>
                   <Photo img={c.image} palette={a.palette} seed={`${a.slug}${i}`} />
                 </button>
                 {c.image.caption && <figcaption className="eyebrow mt-3">{c.image.caption}</figcaption>}
               </motion.figure>
+              )}
             </section>
           ))}
         </div>
@@ -101,7 +106,7 @@ export default function AdventureStory({ a, next, map }: { a: Adventure; next: A
           <p className="eyebrow mb-6">Contact sheet</p>
           <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x">
             {a.gallery.map((g, i) => (
-              <button key={i} onClick={() => lb.open(photos, a.chapters.length + i)} className="snap-start shrink-0 w-[70vw] md:w-[28vw] text-left cursor-zoom-in group">
+              <button key={i} onClick={() => lb.open(photos, chapterImgs.length + i)} className="snap-start shrink-0 w-[70vw] md:w-[28vw] text-left cursor-zoom-in group">
                 <div className="aspect-[4/5] overflow-hidden"><div className="w-full h-full transition-transform duration-1000 group-hover:scale-105"><Photo img={g} palette={a.palette} seed={`${a.slug}g${i}`} /></div></div>
                 <p className="eyebrow mt-2">{g.caption}</p>
               </button>
