@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { feature, mesh, merge } from "topojson-client";
 import { geoMercator, geoPath, geoDistance, geoInterpolate } from "d3-geo";
-import type { Adventure } from "./types";
+import type { Adventure, MiniMapSpec } from "./types";
 
 /** Everything the route map needs, pre-projected on the server so no geodata ships to the browser. */
 export type MapData = {
@@ -22,9 +22,17 @@ export function buildMap(a: Adventure, w = 600, h = 520): MapData {
     { name: "Start", coords: a.route[0] },
     { name: "Finish", coords: a.route[a.route.length - 1] },
   ];
-  const all = legs.flatMap((l) => l.path);
+  return project(legs, stops, legs.flatMap((l) => l.path), w, h, 36);
+}
+
+/** A small map for a single day: fitted to the given bounds rather than to the legs. */
+export function buildMiniMap(m: MiniMapSpec, w = 600, h = 375): MapData {
+  const [[a, b], [c, d]] = m.bounds;
+  return project(m.legs ?? [], m.stops, [[a, b], [c, d], [a, d], [c, b]], w, h, 0);
+}
+
+function project(legs: { mode: string; path: [number, number][] }[], stops: { name: string; coords: [number, number]; anchor?: "start" | "end" }[], all: [number, number][], w: number, h: number, pad: number): MapData {
   const line = { type: "MultiPoint" as const, coordinates: all.map(([la, lo]) => [lo, la]) };
-  const pad = 36;
   const proj = geoMercator().fitExtent([[pad, pad], [w - pad, h - pad]], line);
   proj.clipExtent([[-10, -10], [w + 10, h + 10]]);
   const gp = geoPath(proj).digits(1);

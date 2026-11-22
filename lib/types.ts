@@ -32,7 +32,7 @@ export type Adventure = {
   /** Named stops shown on the map. */
   stops?: { name: string; coords: [number, number]; anchor?: "start" | "end" }[];
   elevation: number[];
-  chapters: { heading: string; body?: string; label?: string; bullets?: string[]; image?: Img }[];
+  chapters: { heading: string; body?: string; label?: string; bullets?: string[]; image?: Img; miniMap?: MiniMapSpec }[];
   gallery: Img[];
 };
 
@@ -51,4 +51,11 @@ export type Profile = {
   intro: string;
   location: string;
   socials: { label: string; href: string }[];
+};
+
+export type MiniMapSpec = {
+  caption?: string;
+  bounds: [[number, number], [number, number]]; // [lat, lng] corners the map is fitted to
+  legs?: { mode: string; path: [number, number][] }[];
+  stops: { name: string; coords: [number, number]; anchor?: "start" | "end" }[];
 };

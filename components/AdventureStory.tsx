@@ -5,12 +5,13 @@ import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Photo from "./Photo";
 import RouteMap from "./RouteMap";
+import MiniMap from "./MiniMap";
 import Lightbox, { useLightbox } from "./Lightbox";
 import { palettes, typeLabel } from "@/lib/palette";
 import type { Adventure } from "@/lib/types";
 import type { MapData } from "@/lib/map";
 
-export default function AdventureStory({ a, next, map }: { a: Adventure; next: Adventure; map: MapData }) {
+export default function AdventureStory({ a, next, map, minis = [] }: { a: Adventure; next: Adventure; map: MapData; minis?: (MapData | null)[] }) {
   const p = palettes[a.palette];
   const hero = useRef<HTMLDivElement>(null);
   const story = useRef<HTMLDivElement>(null);
@@ -72,7 +73,7 @@ export default function AdventureStory({ a, next, map }: { a: Adventure; next: A
             <section key={i}>
               <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-15% 0px" }} transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}>
                 <p className="font-mono text-xs" style={{ color: p.accent }}>{c.label ?? `Day ${Math.max(1, Math.round((i / Math.max(1, a.chapters.length - 1)) * a.days))} / ${a.days}`}</p>
-                <h2 className={`display mt-3 ${daily && !c.image ? "text-4xl md:text-5xl" : "text-5xl md:text-7xl"}`}>{c.heading}</h2>
+                <h2 className={`display mt-3 ${daily && !c.image && !minis[i] ? "text-4xl md:text-5xl" : "text-5xl md:text-7xl"}`}>{c.heading}</h2>
                 {c.body && <p className="text-lg md:text-xl leading-relaxed text-bone/80 mt-6 max-w-xl first-letter:font-display first-letter:text-6xl first-letter:float-left first-letter:mr-2 first-letter:leading-[0.8]">{c.body}</p>}
                 {c.bullets && (
                   <ul className="mt-6 max-w-xl space-y-3">
@@ -84,6 +85,7 @@ export default function AdventureStory({ a, next, map }: { a: Adventure; next: A
                   </ul>
                 )}
               </motion.div>
+              {!c.image && minis[i] && <MiniMap map={minis[i]!} accent={p.accent} caption={c.miniMap?.caption} />}
               {c.image && (
               <motion.figure className="mt-10" initial={{ clipPath: "inset(12% 12% 12% 12%)" }} whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }} viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}>
                 <button className={`block overflow-hidden cursor-zoom-in ${c.image.portrait ? "aspect-[4/5] w-full md:w-3/5" : "w-full aspect-[16/10]"}`} onClick={() => lb.open(photos, imgIndex(i))} aria-label={`Open photo: ${c.image.alt}`}>

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import AdventureStory from "@/components/AdventureStory";
 import { getAdventure, getAdventures } from "@/lib/content";
-import { buildMap } from "@/lib/map";
+import { buildMap, buildMiniMap } from "@/lib/map";
 
 export const generateStaticParams = () => getAdventures().map((a) => ({ slug: a.slug }));
 export const dynamicParams = false;
@@ -16,5 +16,5 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const all = getAdventures();
   const i = all.findIndex((a) => a.slug === slug);
   if (i < 0) notFound();
-  return <AdventureStory a={all[i]} next={all[(i + 1) % all.length]} map={buildMap(all[i])} />;
+  return <AdventureStory a={all[i]} next={all[(i + 1) % all.length]} map={buildMap(all[i])} minis={all[i].chapters.map((c) => (c.miniMap ? buildMiniMap(c.miniMap) : null))} />;
 }

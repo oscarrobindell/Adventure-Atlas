@@ -108,7 +108,44 @@
       "heading": "Wheels up",
       "bullets": [
         "Overnight flight to Munich"
-      ]
+      ],
+      "miniMap": {
+        "caption": "Overnight into Munich.",
+        "bounds": [
+          [
+            44.5,
+            -1
+          ],
+          [
+            52.5,
+            17
+          ]
+        ],
+        "legs": [
+          {
+            "mode": "plane",
+            "path": [
+              [
+                50.5,
+                -3
+              ],
+              [
+                48.354,
+                11.786
+              ]
+            ]
+          }
+        ],
+        "stops": [
+          {
+            "name": "Munich",
+            "coords": [
+              48.354,
+              11.786
+            ]
+          }
+        ]
+      }
     },
     {
       "label": "Day 2 · Mon, Jun 29",
@@ -116,7 +153,51 @@
       "bullets": [
         "Connecting flight from Munich to Split",
         "Checked into an apartment in Split"
-      ]
+      ],
+      "miniMap": {
+        "caption": "Munich to Split.",
+        "bounds": [
+          [
+            42.3,
+            8.5
+          ],
+          [
+            49.6,
+            20.5
+          ]
+        ],
+        "legs": [
+          {
+            "mode": "plane",
+            "path": [
+              [
+                48.354,
+                11.786
+              ],
+              [
+                43.539,
+                16.298
+              ]
+            ]
+          }
+        ],
+        "stops": [
+          {
+            "name": "Munich",
+            "coords": [
+              48.354,
+              11.786
+            ]
+          },
+          {
+            "name": "Split",
+            "coords": [
+              43.508,
+              16.44
+            ]
+          }
+        ]
+      }
     },
     {
       "label": "Day 3 · Tue, Jun 30",
@@ -138,7 +219,71 @@
       "bullets": [
         "Day two of the sailing trip",
         "Island-hopping off the coast near Šibenik"
-      ]
+      ],
+      "miniMap": {
+        "caption": "Among the islands off Šibenik (route approximate).",
+        "bounds": [
+          [
+            43.6,
+            15.5
+          ],
+          [
+            43.86,
+            16.05
+          ]
+        ],
+        "legs": [
+          {
+            "mode": "boat",
+            "path": [
+              [
+                43.752,
+                15.746
+              ],
+              [
+                43.735,
+                15.75
+              ],
+              [
+                43.71,
+                15.78
+              ],
+              [
+                43.7,
+                15.83
+              ],
+              [
+                43.715,
+                15.865
+              ],
+              [
+                43.728,
+                15.88
+              ],
+              [
+                43.735,
+                15.89
+              ]
+            ]
+          }
+        ],
+        "stops": [
+          {
+            "name": "Tribunj",
+            "coords": [
+              43.752,
+              15.746
+            ]
+          },
+          {
+            "name": "Šibenik",
+            "coords": [
+              43.735,
+              15.89
+            ]
+          }
+        ]
+      }
     },
     {
       "label": "Day 5 · Thu, Jul 2",
@@ -337,7 +482,52 @@
       "bullets": [
         "Evening flight from Thessaloniki to Santorini",
         "Staying in Perissa"
-      ]
+      ],
+      "miniMap": {
+        "caption": "Thessaloniki to Santorini.",
+        "bounds": [
+          [
+            35.9,
+            20.5
+          ],
+          [
+            41.3,
+            27.5
+          ]
+        ],
+        "legs": [
+          {
+            "mode": "plane",
+            "path": [
+              [
+                40.52,
+                22.97
+              ],
+              [
+                36.399,
+                25.479
+              ]
+            ]
+          }
+        ],
+        "stops": [
+          {
+            "name": "Thessaloniki",
+            "coords": [
+              40.64,
+              22.944
+            ]
+          },
+          {
+            "name": "Santorini",
+            "coords": [
+              36.36,
+              25.43
+            ],
+            "anchor": "end"
+          }
+        ]
+      }
     },
     {
       "label": "Day 20 · Fri, Jul 17",
@@ -382,7 +572,44 @@
       "heading": "Last day on Santorini",
       "bullets": [
         "Returned the rental car"
-      ]
+      ],
+      "miniMap": {
+        "caption": "Last day on Santorini.",
+        "bounds": [
+          [
+            36.33,
+            25.3
+          ],
+          [
+            36.49,
+            25.52
+          ]
+        ],
+        "stops": [
+          {
+            "name": "Perissa",
+            "coords": [
+              36.355,
+              25.475
+            ],
+            "anchor": "end"
+          },
+          {
+            "name": "Fira",
+            "coords": [
+              36.417,
+              25.432
+            ]
+          },
+          {
+            "name": "Oia",
+            "coords": [
+              36.461,
+              25.376
+            ]
+          }
+        ]
+      }
     },
     {
       "label": "Day 24 · Tue, Jul 21",
@@ -415,7 +642,44 @@
       "heading": "Home",
       "bullets": [
         "Flew home via Montréal"
-      ]
+      ],
+      "miniMap": {
+        "caption": "Athens, then home via Montréal.",
+        "bounds": [
+          [
+            35,
+            6
+          ],
+          [
+            46,
+            27
+          ]
+        ],
+        "legs": [
+          {
+            "mode": "plane",
+            "path": [
+              [
+                37.936,
+                23.944
+              ],
+              [
+                45.5,
+                3
+              ]
+            ]
+          }
+        ],
+        "stops": [
+          {
+            "name": "Athens",
+            "coords": [
+              37.97,
+              23.73
+            ]
+          }
+        ]
+      }
     }
   ],
   "gallery": [
