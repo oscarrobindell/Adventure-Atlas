@@ -6,7 +6,7 @@ import Globe, { type GlobePin } from "./Globe";
 
 type Item = { slug: string; title: string; country: string; year: string; type: string; color: string };
 
-export default function Hero({ pins, journey, items, name, intro }: { pins: GlobePin[]; journey: string[]; items: Item[]; name: string; intro: string }) {
+export default function Hero({ pins, journey, items, name, intro, countries }: { pins: GlobePin[]; journey: string[]; items: Item[]; name: string; intro: string; countries: number }) {
   const [focus, setFocus] = useState<string | null>(null);
   const [hover, setHover] = useState<string | null>(null);
   const ease = [0.16, 1, 0.3, 1] as const;
@@ -20,7 +20,7 @@ export default function Hero({ pins, journey, items, name, intro }: { pins: Glob
       <div className="relative z-10 h-full px-6 md:px-12 pt-28 pb-10 flex flex-col justify-between pointer-events-none">
         <div>
           <motion.p className="eyebrow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, duration: 1 }}>
-            {items.length} adventures · {new Set(items.map((i) => i.country)).size} countries
+            {items.length} adventures · {countries} countries
           </motion.p>
           <h1 aria-label="A life on the move." className="display text-[18vw] md:text-[8.6vw] mt-4">
             {["A life", "on the move."].map((line, i) => (

@@ -1,3 +1,4 @@
+import { place } from "@/lib/place";
 import Gallery from "@/components/Gallery";
 import { getAdventures } from "@/lib/content";
 
@@ -9,7 +10,7 @@ export default function Page() {
   const photos = getAdventures().flatMap((a) =>
     [a.cover, ...a.chapters.map((c) => c.image), ...a.gallery].map((img, i) => ({
       ...img, caption: img.caption ?? a.title, palette: a.palette, seed: `${a.slug}-${i}`,
-      country: a.country, meta: `${a.region}, ${a.country}`, ratio: ratios[(i + a.slug.length) % ratios.length],
+      country: a.country, meta: place(a), ratio: ratios[(i + a.slug.length) % ratios.length],
     }))
   );
   return <Gallery photos={photos} />;

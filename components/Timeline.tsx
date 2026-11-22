@@ -1,4 +1,5 @@
 "use client";
+import { place } from "@/lib/place";
 import Link from "next/link";
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
@@ -56,7 +57,7 @@ export default function Timeline({ adventures }: { adventures: Adventure[] }) {
                   <div className="aspect-[4/3] overflow-hidden"><div className="w-full h-full transition-transform duration-[1.4s] group-hover:scale-105"><Photo img={a.cover} palette={a.palette} seed={a.slug} /></div></div>
                   <p className="eyebrow mt-4" style={{ color: palettes[a.palette].accent }}>{new Date(a.date).toLocaleDateString("en-US", { month: "short", year: "numeric" })} · {typeLabel[a.type]}</p>
                   <p className="display text-4xl md:text-5xl mt-2">{a.title}</p>
-                  <p className="text-mist text-sm mt-1">{a.region}, {a.country} · {a.days} days · {a.distanceKm.toLocaleString("en-US")} km</p>
+                  <p className="text-mist text-sm mt-1">{place(a)} · {a.days} days · {a.distanceKm.toLocaleString("en-US")} km</p>
                 </Link>
               </div>
             );

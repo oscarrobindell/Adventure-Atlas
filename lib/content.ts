@@ -21,7 +21,7 @@ export const getProfile = () => read<Profile>("profile.json");
 export function getStats(list = getAdventures()) {
   return {
     adventures: list.length,
-    countries: new Set(list.map((a) => a.country)).size,
+    countries: new Set(list.flatMap((a) => a.countries ?? [a.country])).size,
     km: list.reduce((s, a) => s + a.distanceKm, 0),
     climbed: list.reduce((s, a) => s + a.elevationGainM, 0),
     days: list.reduce((s, a) => s + a.days, 0),

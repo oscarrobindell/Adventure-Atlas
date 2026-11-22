@@ -1,4 +1,5 @@
 "use client";
+import { place } from "@/lib/place";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
@@ -27,6 +28,7 @@ export default function AdventureStory({ a, next }: { a: Adventure; next: Advent
     isDive ? { l: "Max depth", v: `${a.maxDepthM} m` } : { l: "Highest point", v: `${a.highestPointM.toLocaleString("en-US")} m` },
     isDive ? { l: "Nights at sea", v: a.nightsOutside } : { l: "Elevation gain", v: `${a.elevationGainM.toLocaleString("en-US")} m` },
   ];
+  const shown = a.stats ?? stats;
   const photos = [...a.chapters.map((c) => c.image), ...a.gallery];
 
   return (
@@ -36,16 +38,17 @@ export default function AdventureStory({ a, next }: { a: Adventure; next: Advent
         <motion.div className="absolute inset-0" style={{ y, scale }}><Photo img={a.cover} palette={a.palette} seed={a.slug} priority /></motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-transparent to-ink" />
         <motion.div style={{ opacity: fade }} className="absolute inset-x-0 bottom-0 px-6 md:px-12 pb-16">
-          <p className="eyebrow" style={{ color: p.accent }}>{typeLabel[a.type] ?? a.type} · {a.region}, {a.country} · {new Date(a.date).toLocaleDateString("en-US", { month: "long", year: "numeric" })}</p>
+          <p className="eyebrow" style={{ color: p.accent }}>{typeLabel[a.type] ?? a.type} · {place(a)} · {new Date(a.date).toLocaleDateString("en-US", { month: "long", year: "numeric" })}</p>
           <h1 className="display text-[19vw] md:text-[13vw] mt-3">{a.title}</h1>
           <p className="font-display italic text-2xl md:text-4xl text-bone/80 mt-2 max-w-3xl">{a.subtitle}</p>
           {a.placeholder && <p className="mt-6 inline-block eyebrow border border-dashed border-bone/30 px-3 py-1">Placeholder story · swap in your own</p>}
+          {a.draft && <p className="mt-6 inline-block eyebrow border border-dashed border-bone/30 px-3 py-1">Draft · photos and story coming</p>}
         </motion.div>
       </div>
 
       {/* Stats strip */}
       <dl className="grid grid-cols-2 md:grid-cols-4 px-6 md:px-12 border-y hairline">
-        {stats.map((s) => (
+        {shown.map((s) => (
           <div key={s.l} className="py-8 md:pr-8 border-b md:border-b-0 hairline md:[&:not(:last-child)]:border-r md:px-8 md:first:pl-0">
             <dt className="eyebrow">{s.l}</dt><dd className="display text-5xl md:text-6xl mt-3">{s.v}</dd>
           </div>

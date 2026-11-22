@@ -1,8 +1,14 @@
 export type Img = { src: string; alt: string; caption?: string };
-export type PaletteName = "dusk" | "glacier" | "forest" | "ocean" | "desert";
+export type PaletteName = "dusk" | "glacier" | "forest" | "ocean" | "desert" | "adriatic";
 
 export type Adventure = {
   placeholder?: boolean;
+  /** Real trip whose story is still a first draft. */
+  draft?: boolean;
+  /** Extra countries visited, for multi-country trips. */
+  countries?: string[];
+  /** Overrides the four stats under the cover. */
+  stats?: { l: string; v: string }[];
   slug: string;
   title: string;
   subtitle: string;

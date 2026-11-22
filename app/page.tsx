@@ -13,7 +13,7 @@ export default function Home() {
   const s = getStats(adventures);
 
   const pins = [
-    ...adventures.map((a) => ({ id: a.slug, title: a.title, sub: `${a.country} · ${a.date.slice(0, 4)}`, lat: a.coords[0], lng: a.coords[1], color: palettes[a.palette].accent, href: `/adventures/${a.slug}/` })),
+    ...adventures.map((a) => ({ id: a.slug, title: a.title, sub: `${a.countries ? a.region : a.country} · ${a.date.slice(0, 4)}`, lat: a.coords[0], lng: a.coords[1], color: palettes[a.palette].accent, href: `/adventures/${a.slug}/` })),
     ...bucket.map((b) => ({ id: `dream-${b.title}`, title: b.title, sub: `${b.country} · ${b.when}`, lat: b.coords[0], lng: b.coords[1], color: "#9aa3a8", dream: true })),
   ];
   const journey = [...adventures].reverse().map((a) => a.slug);
@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       <Hero pins={pins} journey={journey} name={profile.name} intro={profile.intro}
-        items={adventures.map((a) => ({ slug: a.slug, title: a.title, country: a.country, year: a.date.slice(0, 4), type: a.type, color: palettes[a.palette].accent }))} />
+        countries={s.countries} items={adventures.map((a) => ({ slug: a.slug, title: a.title, country: a.countries ? a.region : a.country, year: a.date.slice(0, 4), type: a.type, color: palettes[a.palette].accent }))} />
 
       {/* Stats */}
       <section className="px-6 md:px-12 py-32" aria-labelledby="stats-h">

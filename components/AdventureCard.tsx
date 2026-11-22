@@ -1,3 +1,4 @@
+import { place } from "@/lib/place";
 import Link from "next/link";
 import Photo from "./Photo";
 import { palettes, typeLabel } from "@/lib/palette";
@@ -14,7 +15,7 @@ export default function AdventureCard({ a, index, tall = false }: { a: Adventure
         <span className="absolute top-4 left-4 font-mono text-xs">{String(index + 1).padStart(2, "0")}</span>
         <span className="absolute top-4 right-4 eyebrow !text-bone/80 border border-bone/30 rounded-full px-3 py-1">{typeLabel[a.type] ?? a.type}</span>
         <div className="absolute bottom-0 inset-x-0 p-5">
-          <p className="eyebrow" style={{ color: palettes[a.palette].accent }}>{a.region}, {a.country} · {a.date.slice(0, 4)}</p>
+          <p className="eyebrow" style={{ color: palettes[a.palette].accent }}>{place(a)} · {a.date.slice(0, 4)}</p>
           <h3 className="display text-4xl md:text-5xl mt-2">{a.title}</h3>
         </div>
       </div>

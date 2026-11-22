@@ -6,9 +6,10 @@ export const palettes: Record<PaletteName, { sky: [string, string]; sun: string;
   glacier: { sky: ["#0d1b2a", "#7fb8c9"], sun: "#e8fbff", ridges: ["#5d8ea3", "#3c6478", "#24404f", "#111f28"], accent: "#8fe3ff" },
   forest:  { sky: ["#0f1d17", "#c9b37a"], sun: "#fff1c4", ridges: ["#557256", "#36513c", "#213528", "#101b14"], accent: "#c8e27a" },
   ocean:   { sky: ["#03131f", "#2c7da0"], sun: "#c6f1ff", ridges: ["#1f6280", "#144660", "#0b2d42", "#041522"], accent: "#5fd4ff" },
+  adriatic: { sky: ["#10233a", "#f2a77a"], sun: "#fff0d0", ridges: ["#3f8f98", "#2a6b78", "#1a4a58", "#0c2632"], accent: "#ffbf8a" },
   desert:  { sky: ["#271426", "#f0a35e"], sun: "#ffe3a8", ridges: ["#c0603a", "#8e3f27", "#5a2619", "#2a120c"], accent: "#ffb25b" },
 };
 
 export const typeLabel: Record<string, string> = {
-  hike: "Hike", climb: "Climb", roadtrip: "Road trip", dive: "Dive", expedition: "Expedition", paddle: "Paddle", travel: "Travel",
+  hike: "Hike", climb: "Climb", roadtrip: "Road trip", dive: "Dive", expedition: "Expedition", paddle: "Paddle", travel: "Journey",
 };
