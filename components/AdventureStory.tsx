@@ -8,8 +8,9 @@ import RouteMap from "./RouteMap";
 import Lightbox, { useLightbox } from "./Lightbox";
 import { palettes, typeLabel } from "@/lib/palette";
 import type { Adventure } from "@/lib/types";
+import type { MapData } from "@/lib/map";
 
-export default function AdventureStory({ a, next }: { a: Adventure; next: Adventure }) {
+export default function AdventureStory({ a, next, map }: { a: Adventure; next: Adventure; map: MapData }) {
   const p = palettes[a.palette];
   const hero = useRef<HTMLDivElement>(null);
   const story = useRef<HTMLDivElement>(null);
@@ -60,16 +61,25 @@ export default function AdventureStory({ a, next }: { a: Adventure; next: Advent
         <div className="hidden md:block md:col-span-5">
           <div className="sticky top-24">
             <p className="eyebrow mb-4">The route</p>
-            <RouteMap route={a.route} elevation={a.elevation} progress={progress} accent={p.accent} />
+            <RouteMap map={map} elevation={a.elevation} progress={progress} accent={p.accent} />
           </div>
         </div>
         <div className="md:col-span-7 md:col-start-6 space-y-40 pb-24">
           {a.chapters.map((c, i) => (
             <section key={i}>
               <motion.div initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-15% 0px" }} transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}>
-                <p className="font-mono text-xs" style={{ color: p.accent }}>Day {Math.max(1, Math.round((i / Math.max(1, a.chapters.length - 1)) * a.days))} / {a.days}</p>
+                <p className="font-mono text-xs" style={{ color: p.accent }}>{c.label ?? `Day ${Math.max(1, Math.round((i / Math.max(1, a.chapters.length - 1)) * a.days))} / ${a.days}`}</p>
                 <h2 className="display text-5xl md:text-7xl mt-3">{c.heading}</h2>
-                <p className="text-lg md:text-xl leading-relaxed text-bone/80 mt-6 max-w-xl first-letter:font-display first-letter:text-6xl first-letter:float-left first-letter:mr-2 first-letter:leading-[0.8]">{c.body}</p>
+                {c.body && <p className="text-lg md:text-xl leading-relaxed text-bone/80 mt-6 max-w-xl first-letter:font-display first-letter:text-6xl first-letter:float-left first-letter:mr-2 first-letter:leading-[0.8]">{c.body}</p>}
+                {c.bullets && (
+                  <ul className="mt-6 max-w-xl space-y-3">
+                    {c.bullets.map((b, j) => (
+                      <li key={j} className="grid grid-cols-[1.25rem_1fr] text-lg leading-snug text-bone/80">
+                        <span aria-hidden className="mt-[0.55em] h-px w-3" style={{ background: p.accent }} />{b}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </motion.div>
               <motion.figure className="mt-10" initial={{ clipPath: "inset(12% 12% 12% 12%)" }} whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }} viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}>
                 <button className="block w-full aspect-[16/10] overflow-hidden cursor-zoom-in" onClick={() => lb.open(photos, i)} aria-label={`Open photo: ${c.image.alt}`}>
@@ -83,7 +93,7 @@ export default function AdventureStory({ a, next }: { a: Adventure; next: Advent
       </div>
 
       {/* Mobile map */}
-      <div className="md:hidden px-6 pb-16"><p className="eyebrow mb-4">The route</p><RouteMap route={a.route} elevation={a.elevation} progress={progress} accent={p.accent} /></div>
+      <div className="md:hidden px-6 pb-16"><p className="eyebrow mb-4">The route</p><RouteMap map={map} elevation={a.elevation} progress={progress} accent={p.accent} /></div>
 
       {/* Contact sheet */}
       {a.gallery.length > 0 && (

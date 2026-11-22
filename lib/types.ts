@@ -27,8 +27,12 @@ export type Adventure = {
   palette: PaletteName;
   cover: Img;
   route: [number, number][];
+  /** Optional per-leg travel modes for an accurate map: car, boat, plane, trail. */
+  legs?: { mode: string; path: [number, number][] }[];
+  /** Named stops shown on the map. */
+  stops?: { name: string; coords: [number, number] }[];
   elevation: number[];
-  chapters: { heading: string; body: string; image: Img }[];
+  chapters: { heading: string; body?: string; label?: string; bullets?: string[]; image: Img }[];
   gallery: Img[];
 };
 
