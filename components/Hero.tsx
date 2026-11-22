@@ -6,7 +6,7 @@ import Globe, { type GlobePin } from "./Globe";
 
 type Item = { slug: string; title: string; country: string; year: string; type: string; color: string };
 
-export default function Hero({ pins, journey, items, name, intro, countries }: { pins: GlobePin[]; journey: string[]; items: Item[]; name: string; intro: string; countries: number }) {
+export default function Hero({ pins, journey, items, quote, quoteBy, countries }: { pins: GlobePin[]; journey: string[]; items: Item[]; quote: string; quoteBy: string; countries: number }) {
   const [focus, setFocus] = useState<string | null>(null);
   const [hover, setHover] = useState<string | null>(null);
   const ease = [0.16, 1, 0.3, 1] as const;
@@ -31,9 +31,10 @@ export default function Hero({ pins, journey, items, name, intro, countries }: {
               </span>
             ))}
           </h1>
-          <motion.p className="max-w-sm mt-6 text-mist leading-relaxed" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 1 }}>
-            {intro} <span className="text-bone">— {name}</span>
-          </motion.p>
+          <motion.figure className="max-w-sm mt-6" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9, duration: 1 }}>
+            <blockquote className="text-mist leading-relaxed italic">“{quote}”</blockquote>
+            <figcaption className="eyebrow mt-3 text-bone">— {quoteBy}</figcaption>
+          </motion.figure>
         </div>
 
         <motion.nav aria-label="Adventures" className="pointer-events-auto max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2, duration: 1 }}>

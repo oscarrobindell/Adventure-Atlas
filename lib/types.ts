@@ -49,6 +49,8 @@ export type Profile = {
   name: string;
   tagline: string;
   intro: string;
+  quote: string;
+  quoteBy: string;
   location: string;
   socials: { label: string; href: string }[];
 };

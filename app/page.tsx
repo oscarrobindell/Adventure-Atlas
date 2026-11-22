@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <>
-      <Hero pins={pins} journey={journey} name={profile.name} intro={profile.intro}
+      <Hero pins={pins} journey={journey} quote={profile.quote} quoteBy={profile.quoteBy}
         countries={s.countries} items={adventures.map((a) => ({ slug: a.slug, title: a.title, country: a.countries ? a.region : a.country, year: a.date.slice(0, 4), type: a.type, color: palettes[a.palette].accent }))} />
 
       {/* Stats */}
