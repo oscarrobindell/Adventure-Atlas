@@ -1,5 +1,5 @@
 // Pre-computes the dotted-land pattern for the globe so the browser does no geometry work.
-import { readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { feature } from "topojson-client";
 import { geoContains } from "d3-geo";
 
@@ -15,5 +15,6 @@ for (let i = 0; i < N; i++) {
   const lng = ((((theta * 180) / Math.PI) % 360) + 540) % 360 - 180;
   if (geoContains(land, [lng, lat])) out.push(+lat.toFixed(2), +lng.toFixed(2));
 }
+mkdirSync(new URL("../public/", import.meta.url), { recursive: true });
 writeFileSync(new URL("../public/land-dots.json", import.meta.url), JSON.stringify(out));
 console.log(`globe: ${out.length / 2} land dots`);
