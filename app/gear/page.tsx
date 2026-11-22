@@ -29,6 +29,11 @@ export default function Page() {
                   </div>
                 )}
               </div>
+              {b.items.length === 0 ? (
+                <div className="md:col-span-8 md:border-l hairline md:pl-8 flex items-center">
+                  <a href={b.href} {...ext} className="eyebrow !text-bone border border-bone/30 px-4 py-2 hover:border-ember hover:!text-ember transition-colors">Shop {b.name} ↗</a>
+                </div>
+              ) : (
               <ul className="md:col-span-8 md:border-l hairline md:pl-8">
                 {b.items.map((it) => (
                   <li key={it.name} className="border-b hairline last:border-b-0">
@@ -42,6 +47,7 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
+              )}
             </article>
           ))}
           <p className="text-sm text-mist mt-8 max-w-xl">Some of these are ambassador or affiliate links. Buying through them may support me at no extra cost to you.</p>

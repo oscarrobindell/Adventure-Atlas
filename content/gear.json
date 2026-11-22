@@ -1,4 +1,10 @@
 {
   "intro": "",
-  "brands": []
+  "brands": [
+    {
+      "name": "Osprey",
+      "href": "https://osprey.pxf.io/9VDOJe",
+      "items": []
+    }
+  ]
 }
