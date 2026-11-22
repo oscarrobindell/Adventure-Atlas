@@ -1,0 +1,1088 @@
+{
+  "draft": true,
+  "slug": "philippines-leyte-samar",
+  "title": "Leyte & Samar",
+  "subtitle": "A family wedding in the Eastern Visayas",
+  "type": "travel",
+  "country": "Philippines",
+  "region": "Eastern Visayas",
+  "coords": [
+    11.65,
+    124.85
+  ],
+  "date": "2025-04-14",
+  "days": 10,
+  "distanceKm": 350,
+  "elevationGainM": 0,
+  "highestPointM": 100,
+  "nights": 9,
+  "nightsOutside": 0,
+  "palette": "ocean",
+  "stats": [
+    {
+      "l": "By road",
+      "v": "~350 km"
+    },
+    {
+      "l": "Islands",
+      "v": "Leyte · Samar"
+    },
+    {
+      "l": "Days",
+      "v": "10"
+    },
+    {
+      "l": "Got around by",
+      "v": "Plane · jeepney · pedicab"
+    }
+  ],
+  "cover": {
+    "src": "/photos/philippines/wedding-sunset.jpg",
+    "alt": "Sunset clouds over the sea off Samar"
+  },
+  "route": [
+    [
+      11.2439,
+      125.0041
+    ],
+    [
+      11.2464,
+      124.9946
+    ],
+    [
+      11.2477,
+      124.9868
+    ],
+    [
+      11.2519,
+      124.9755
+    ],
+    [
+      11.2621,
+      124.9666
+    ],
+    [
+      11.2755,
+      124.9609
+    ],
+    [
+      11.2937,
+      124.96
+    ],
+    [
+      11.3089,
+      124.9729
+    ],
+    [
+      11.326,
+      124.9976
+    ],
+    [
+      11.3521,
+      125.0261
+    ],
+    [
+      11.3853,
+      125.0067
+    ],
+    [
+      11.4169,
+      125.0025
+    ],
+    [
+      11.4305,
+      125.0137
+    ],
+    [
+      11.4504,
+      125.0185
+    ],
+    [
+      11.4689,
+      125.0196
+    ],
+    [
+      11.4823,
+      125.0268
+    ],
+    [
+      11.4923,
+      125.0271
+    ],
+    [
+      11.5077,
+      125.026
+    ],
+    [
+      11.5247,
+      125.0285
+    ],
+    [
+      11.5364,
+      125.0207
+    ],
+    [
+      11.5456,
+      125.017
+    ],
+    [
+      11.5577,
+      125.0146
+    ],
+    [
+      11.5673,
+      125.0031
+    ],
+    [
+      11.5879,
+      124.9915
+    ],
+    [
+      11.5986,
+      124.9997
+    ],
+    [
+      11.6073,
+      125.0108
+    ],
+    [
+      11.6176,
+      125.0143
+    ],
+    [
+      11.6299,
+      125.0202
+    ],
+    [
+      11.6455,
+      125.019
+    ],
+    [
+      11.6603,
+      125.0222
+    ],
+    [
+      11.6693,
+      125.0308
+    ],
+    [
+      11.6778,
+      125.0399
+    ],
+    [
+      11.6851,
+      125.0442
+    ],
+    [
+      11.6927,
+      125.0563
+    ],
+    [
+      11.6991,
+      125.0629
+    ],
+    [
+      11.7049,
+      125.0662
+    ],
+    [
+      11.723,
+      125.0657
+    ],
+    [
+      11.7387,
+      125.064
+    ],
+    [
+      11.7492,
+      125.0611
+    ],
+    [
+      11.7603,
+      125.0498
+    ],
+    [
+      11.7713,
+      125.0369
+    ],
+    [
+      11.7762,
+      125.0189
+    ],
+    [
+      11.7834,
+      125.0107
+    ],
+    [
+      11.7828,
+      124.9949
+    ],
+    [
+      11.7775,
+      124.98
+    ],
+    [
+      11.7801,
+      124.961
+    ],
+    [
+      11.7711,
+      124.9508
+    ],
+    [
+      11.7636,
+      124.9479
+    ],
+    [
+      11.7589,
+      124.9416
+    ],
+    [
+      11.7632,
+      124.9319
+    ],
+    [
+      11.7584,
+      124.9224
+    ],
+    [
+      11.7613,
+      124.9125
+    ],
+    [
+      11.7615,
+      124.9014
+    ],
+    [
+      11.7702,
+      124.89
+    ],
+    [
+      11.78,
+      124.8884
+    ],
+    [
+      11.7868,
+      124.8898
+    ],
+    [
+      11.7843,
+      124.879
+    ],
+    [
+      11.7898,
+      124.8661
+    ],
+    [
+      11.8007,
+      124.864
+    ],
+    [
+      11.8076,
+      124.8585
+    ],
+    [
+      11.8147,
+      124.8529
+    ],
+    [
+      11.8173,
+      124.841
+    ],
+    [
+      11.8306,
+      124.8371
+    ],
+    [
+      11.8357,
+      124.8291
+    ],
+    [
+      11.8455,
+      124.8274
+    ],
+    [
+      11.8606,
+      124.827
+    ],
+    [
+      11.8698,
+      124.8312
+    ],
+    [
+      11.881,
+      124.8348
+    ],
+    [
+      11.8907,
+      124.8287
+    ],
+    [
+      11.8994,
+      124.8228
+    ],
+    [
+      11.9075,
+      124.8217
+    ],
+    [
+      11.9229,
+      124.8281
+    ],
+    [
+      11.9343,
+      124.8336
+    ],
+    [
+      11.9461,
+      124.8345
+    ],
+    [
+      11.9596,
+      124.8351
+    ],
+    [
+      11.9747,
+      124.8366
+    ],
+    [
+      11.9793,
+      124.8249
+    ],
+    [
+      11.9895,
+      124.8066
+    ],
+    [
+      12.008,
+      124.8145
+    ],
+    [
+      12.0144,
+      124.8076
+    ],
+    [
+      12.0169,
+      124.7978
+    ],
+    [
+      12.0132,
+      124.7868
+    ],
+    [
+      11.995,
+      124.7739
+    ],
+    [
+      11.9844,
+      124.7565
+    ],
+    [
+      11.9921,
+      124.7462
+    ],
+    [
+      12.0093,
+      124.7384
+    ],
+    [
+      12.0264,
+      124.7089
+    ],
+    [
+      12.035,
+      124.674
+    ],
+    [
+      12.0407,
+      124.6553
+    ],
+    [
+      12.0523,
+      124.6328
+    ],
+    [
+      12.0626,
+      124.6125
+    ],
+    [
+      12.0673,
+      124.6027
+    ]
+  ],
+  "elevation": [],
+  "chapters": [
+    {
+      "label": "Day 1 · Mon, Apr 14",
+      "heading": "Across the Pacific",
+      "bullets": [
+        "Overnight flight to Manila"
+      ],
+      "miniMap": {
+        "caption": "The long flight to Manila.",
+        "bounds": [
+          [
+            4,
+            113
+          ],
+          [
+            27,
+            148
+          ]
+        ],
+        "legs": [
+          {
+            "mode": "plane",
+            "path": [
+              [
+                22,
+                152
+              ],
+              [
+                14.508,
+                121.019
+              ]
+            ]
+          }
+        ],
+        "stops": [
+          {
+            "name": "Manila",
+            "coords": [
+              14.508,
+              121.019
+            ],
+            "anchor": "end"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Day 2 · Tue, Apr 15",
+      "heading": "Into Tacloban",
+      "bullets": [
+        "Connecting flight from Manila to Tacloban, on Leyte",
+        "First look at the city: jeepneys, tricycles and tangled power lines"
+      ],
+      "image": {
+        "src": "/photos/philippines/tacloban-jeepney.jpg",
+        "alt": "A painted jeepney on a street in Tacloban",
+        "caption": "Tacloban"
+      }
+    },
+    {
+      "label": "Day 3 · Wed, Apr 16",
+      "heading": "Tacloban",
+      "bullets": [
+        "Santo Niño Shrine and Heritage Museum: painted ceilings, chandeliers and room after room of dioramas",
+        "Looking out over the bay",
+        "Evening swim at the hotel pool"
+      ],
+      "image": {
+        "src": "/photos/philippines/shrine-ceiling.jpg",
+        "alt": "Painted glass ceiling panels in the Santo Niño Shrine, Tacloban"
+      }
+    },
+    {
+      "label": "Day 4 · Thu, Apr 17",
+      "heading": "Over the San Juanico Bridge to Samar",
+      "bullets": [
+        "Across the San Juanico Bridge from Leyte onto Samar",
+        "North up the coast road through Calbiga and Catbalogan",
+        "Pedicabs lined up in the towns along the way",
+        "On to Calbayog, a beach resort on the coast"
+      ],
+      "image": {
+        "src": "/photos/philippines/samar-coast.jpg",
+        "alt": "An island in the strait beside the San Juanico Bridge",
+        "caption": "San Juanico Strait",
+        "portrait": true
+      }
+    },
+    {
+      "label": "Day 5 · Fri, Apr 18",
+      "heading": "Countryside day",
+      "bullets": [
+        "Carabao rides in a village outside Calbayog",
+        "Watching a coconut climber go straight up a palm",
+        "Piglets, parrots and a swim in the sea",
+        "Welcome dinner at the resort by the water"
+      ],
+      "image": {
+        "src": "/photos/philippines/carabao.jpg",
+        "alt": "A carabao grazing on a rope lead"
+      }
+    },
+    {
+      "label": "Day 6 · Sat, Apr 19",
+      "heading": "The wedding",
+      "bullets": [
+        "Ceremony by the sea under a heart-shaped flower arch",
+        "Sunset over the water and the islands",
+        "Lechon, cake and dancing late into the night"
+      ],
+      "image": {
+        "src": "/photos/philippines/wedding-sunset.jpg",
+        "alt": "Sunset clouds over the sea and a dark headland",
+        "caption": "Calbayog"
+      }
+    },
+    {
+      "label": "Day 7 · Sun, Apr 20",
+      "heading": "Calbayog by pedicab",
+      "bullets": [
+        "Pedicab ride through Calbayog at dusk",
+        "Painted murals along the streets",
+        "Dinner out in town"
+      ],
+      "image": {
+        "src": "/photos/philippines/calbayog-pedicab.jpg",
+        "alt": "Riding a pedicab past shops in Calbayog",
+        "caption": "Calbayog",
+        "portrait": true
+      }
+    },
+    {
+      "label": "Day 8 · Mon, Apr 21",
+      "heading": "Back to Leyte",
+      "bullets": [
+        "Drive back south down Samar",
+        "A hilltop church and a huge statue of Christ above the road",
+        "Back over the San Juanico Bridge to Tacloban",
+        "Music and dancing in the evening"
+      ],
+      "image": {
+        "src": "/photos/philippines/hilltop-church.jpg",
+        "alt": "A church on a green hill in Samar",
+        "portrait": true
+      }
+    },
+    {
+      "label": "Day 9 · Tue, Apr 22",
+      "heading": "Tacloban to Manila",
+      "bullets": [
+        "Jeepney to the airport with all the bags",
+        "Flight from Tacloban to Manila",
+        "Evening at Manila airport before the flight home"
+      ],
+      "image": {
+        "src": "/photos/philippines/tacloban-airport.jpg",
+        "alt": "A plane on the tarmac at Tacloban airport",
+        "caption": "Tacloban airport"
+      }
+    },
+    {
+      "label": "Day 10 · Wed, Apr 23",
+      "heading": "Home",
+      "bullets": [
+        "The long flight home",
+        "A suitcase full of Filipino snacks"
+      ],
+      "miniMap": {
+        "caption": "Manila, then the long way home.",
+        "bounds": [
+          [
+            4,
+            113
+          ],
+          [
+            27,
+            148
+          ]
+        ],
+        "legs": [
+          {
+            "mode": "plane",
+            "path": [
+              [
+                14.508,
+                121.019
+              ],
+              [
+                22,
+                152
+              ]
+            ]
+          }
+        ],
+        "stops": [
+          {
+            "name": "Manila",
+            "coords": [
+              14.508,
+              121.019
+            ],
+            "anchor": "end"
+          }
+        ]
+      }
+    }
+  ],
+  "gallery": [
+    {
+      "src": "/photos/philippines/tacloban-bay.jpg",
+      "alt": "Looking out over the bay near Tacloban",
+      "caption": "Tacloban"
+    },
+    {
+      "src": "/photos/philippines/hotel-pool-night.jpg",
+      "alt": "A hotel pool lit up at night",
+      "caption": "Tacloban"
+    },
+    {
+      "src": "/photos/philippines/pedicabs.jpg",
+      "alt": "Red pedicabs parked in a row",
+      "caption": "Samar"
+    },
+    {
+      "src": "/photos/philippines/coconuts.jpg",
+      "alt": "Green coconuts high in a palm"
+    },
+    {
+      "src": "/photos/philippines/swim.jpg",
+      "alt": "Swimming in the sea with mountains on the horizon",
+      "caption": "Samar"
+    },
+    {
+      "src": "/photos/philippines/resort-heart.jpg",
+      "alt": "A heart sign and kayak reflected in an infinity pool",
+      "caption": "The resort"
+    },
+    {
+      "src": "/photos/philippines/wedding-arch.jpg",
+      "alt": "The flower heart arch by the pool before the wedding",
+      "caption": "The wedding"
+    },
+    {
+      "src": "/photos/philippines/sunset-silhouette.jpg",
+      "alt": "Evening clouds over a dark headland"
+    },
+    {
+      "src": "/photos/philippines/christ-statue.jpg",
+      "alt": "A giant statue of Christ on a hillside",
+      "caption": "Samar",
+      "portrait": true
+    }
+  ],
+  "legs": [
+    {
+      "mode": "plane",
+      "path": [
+        [
+          14.508,
+          121.019
+        ],
+        [
+          11.228,
+          125.028
+        ]
+      ]
+    },
+    {
+      "mode": "car",
+      "path": [
+        [
+          11.2439,
+          125.0041
+        ],
+        [
+          11.2464,
+          124.9946
+        ],
+        [
+          11.2477,
+          124.9868
+        ],
+        [
+          11.2519,
+          124.9755
+        ],
+        [
+          11.2621,
+          124.9666
+        ],
+        [
+          11.2755,
+          124.9609
+        ],
+        [
+          11.2937,
+          124.96
+        ],
+        [
+          11.3089,
+          124.9729
+        ],
+        [
+          11.326,
+          124.9976
+        ],
+        [
+          11.3521,
+          125.0261
+        ],
+        [
+          11.3853,
+          125.0067
+        ],
+        [
+          11.4169,
+          125.0025
+        ],
+        [
+          11.4305,
+          125.0137
+        ],
+        [
+          11.4504,
+          125.0185
+        ],
+        [
+          11.4689,
+          125.0196
+        ],
+        [
+          11.4823,
+          125.0268
+        ],
+        [
+          11.4923,
+          125.0271
+        ],
+        [
+          11.5077,
+          125.026
+        ],
+        [
+          11.5247,
+          125.0285
+        ],
+        [
+          11.5364,
+          125.0207
+        ],
+        [
+          11.5456,
+          125.017
+        ],
+        [
+          11.5577,
+          125.0146
+        ],
+        [
+          11.5673,
+          125.0031
+        ],
+        [
+          11.5879,
+          124.9915
+        ],
+        [
+          11.5986,
+          124.9997
+        ],
+        [
+          11.6073,
+          125.0108
+        ],
+        [
+          11.6176,
+          125.0143
+        ],
+        [
+          11.6299,
+          125.0202
+        ],
+        [
+          11.6455,
+          125.019
+        ],
+        [
+          11.6603,
+          125.0222
+        ],
+        [
+          11.6693,
+          125.0308
+        ],
+        [
+          11.6778,
+          125.0399
+        ],
+        [
+          11.6851,
+          125.0442
+        ],
+        [
+          11.6927,
+          125.0563
+        ],
+        [
+          11.6991,
+          125.0629
+        ],
+        [
+          11.7049,
+          125.0662
+        ],
+        [
+          11.723,
+          125.0657
+        ],
+        [
+          11.7387,
+          125.064
+        ],
+        [
+          11.7492,
+          125.0611
+        ],
+        [
+          11.7603,
+          125.0498
+        ],
+        [
+          11.7713,
+          125.0369
+        ],
+        [
+          11.7762,
+          125.0189
+        ],
+        [
+          11.7834,
+          125.0107
+        ],
+        [
+          11.7828,
+          124.9949
+        ],
+        [
+          11.7775,
+          124.98
+        ],
+        [
+          11.7801,
+          124.961
+        ],
+        [
+          11.7711,
+          124.9508
+        ],
+        [
+          11.7636,
+          124.9479
+        ],
+        [
+          11.7589,
+          124.9416
+        ],
+        [
+          11.7632,
+          124.9319
+        ],
+        [
+          11.7584,
+          124.9224
+        ],
+        [
+          11.7613,
+          124.9125
+        ],
+        [
+          11.7615,
+          124.9014
+        ],
+        [
+          11.7702,
+          124.89
+        ],
+        [
+          11.78,
+          124.8884
+        ],
+        [
+          11.7868,
+          124.8898
+        ],
+        [
+          11.7843,
+          124.879
+        ],
+        [
+          11.7898,
+          124.8661
+        ],
+        [
+          11.8007,
+          124.864
+        ],
+        [
+          11.8076,
+          124.8585
+        ],
+        [
+          11.8147,
+          124.8529
+        ],
+        [
+          11.8173,
+          124.841
+        ],
+        [
+          11.8306,
+          124.8371
+        ],
+        [
+          11.8357,
+          124.8291
+        ],
+        [
+          11.8455,
+          124.8274
+        ],
+        [
+          11.8606,
+          124.827
+        ],
+        [
+          11.8698,
+          124.8312
+        ],
+        [
+          11.881,
+          124.8348
+        ],
+        [
+          11.8907,
+          124.8287
+        ],
+        [
+          11.8994,
+          124.8228
+        ],
+        [
+          11.9075,
+          124.8217
+        ],
+        [
+          11.9229,
+          124.8281
+        ],
+        [
+          11.9343,
+          124.8336
+        ],
+        [
+          11.9461,
+          124.8345
+        ],
+        [
+          11.9596,
+          124.8351
+        ],
+        [
+          11.9747,
+          124.8366
+        ],
+        [
+          11.9793,
+          124.8249
+        ],
+        [
+          11.9895,
+          124.8066
+        ],
+        [
+          12.008,
+          124.8145
+        ],
+        [
+          12.0144,
+          124.8076
+        ],
+        [
+          12.0169,
+          124.7978
+        ],
+        [
+          12.0132,
+          124.7868
+        ],
+        [
+          11.995,
+          124.7739
+        ],
+        [
+          11.9844,
+          124.7565
+        ],
+        [
+          11.9921,
+          124.7462
+        ],
+        [
+          12.0093,
+          124.7384
+        ],
+        [
+          12.0264,
+          124.7089
+        ],
+        [
+          12.035,
+          124.674
+        ],
+        [
+          12.0407,
+          124.6553
+        ],
+        [
+          12.0523,
+          124.6328
+        ],
+        [
+          12.0626,
+          124.6125
+        ],
+        [
+          12.0673,
+          124.6027
+        ]
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "name": "Manila",
+      "coords": [
+        14.508,
+        121.019
+      ]
+    },
+    {
+      "name": "Tacloban",
+      "coords": [
+        11.244,
+        125.004
+      ],
+      "anchor": "end"
+    },
+    {
+      "name": "Catbalogan",
+      "coords": [
+        11.775,
+        124.886
+      ],
+      "anchor": "end"
+    },
+    {
+      "name": "Calbayog",
+      "coords": [
+        12.067,
+        124.604
+      ],
+      "anchor": "end"
+    }
+  ]
+}
