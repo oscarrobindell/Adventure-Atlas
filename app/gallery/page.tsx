@@ -10,7 +10,7 @@ export default function Page() {
   const photos = getAdventures().flatMap((a) =>
     [a.cover, ...a.chapters.flatMap((c) => (c.image ? [c.image] : [])), ...a.gallery].map((img, i) => ({
       ...img, caption: img.caption ?? a.title, palette: a.palette, seed: `${a.slug}-${i}`,
-      country: a.country, meta: place(a), ratio: ratios[(i + a.slug.length) % ratios.length],
+      country: a.countries ? a.region : a.country, meta: place(a), ratio: ratios[(i + a.slug.length) % ratios.length],
     }))
   );
   return <Gallery photos={photos} />;
