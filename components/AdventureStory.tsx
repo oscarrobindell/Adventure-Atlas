@@ -42,7 +42,7 @@ export default function AdventureStory({ a, next }: { a: Adventure; next: Advent
           <h1 className="display text-[19vw] md:text-[13vw] mt-3">{a.title}</h1>
           <p className="font-display italic text-2xl md:text-4xl text-bone/80 mt-2 max-w-3xl">{a.subtitle}</p>
           {a.placeholder && <p className="mt-6 inline-block eyebrow border border-dashed border-bone/30 px-3 py-1">Placeholder story · swap in your own</p>}
-          {a.draft && <p className="mt-6 inline-block eyebrow border border-dashed border-bone/30 px-3 py-1">Draft · photos and story coming</p>}
+          {a.draft && <p className="mt-6 inline-block eyebrow border border-dashed border-bone/30 px-3 py-1">Draft story · more to come</p>}
         </motion.div>
       </div>
 

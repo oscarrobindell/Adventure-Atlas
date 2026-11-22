@@ -5,39 +5,217 @@
   "subtitle": "Split to Athens by boat, car and plane",
   "type": "travel",
   "country": "Croatia",
-  "countries": ["Croatia", "Bosnia & Herzegovina", "Montenegro", "Albania", "Greece"],
+  "countries": [
+    "Croatia",
+    "Bosnia & Herzegovina",
+    "Montenegro",
+    "Albania",
+    "Greece"
+  ],
   "region": "The Balkans",
-  "coords": [42.65, 18.09],
-  "date": "2026-07-01",
-  "days": 14,
+  "coords": [
+    42.65,
+    18.09
+  ],
+  "date": "2026-06-29",
+  "days": 24,
   "distanceKm": 2300,
   "elevationGainM": 0,
   "highestPointM": 520,
-  "nights": 13,
+  "nights": 23,
   "nightsOutside": 0,
   "palette": "adriatic",
   "stats": [
-    { "l": "Distance", "v": "~2,300 km" },
-    { "l": "Countries", "v": "5" },
-    { "l": "Stops", "v": "10" },
-    { "l": "Got around by", "v": "Boat · car · plane" }
+    {
+      "l": "Distance",
+      "v": "~2,300 km"
+    },
+    {
+      "l": "Countries",
+      "v": "5"
+    },
+    {
+      "l": "Stops",
+      "v": "10"
+    },
+    {
+      "l": "Got around by",
+      "v": "Boat · car · plane"
+    }
   ],
-  "cover": { "src": "", "alt": "Old town walls above the Adriatic" },
-  "route": [[43.508,16.44],[43.3,16.62],[43.37,16.28],[43.508,16.44],[43.172,16.441],[42.65,18.094],[43.856,18.413],[43.343,17.808],[42.424,18.771],[41.327,19.819],[40.64,22.944],[36.393,25.461],[37.942,23.646]],
-  "elevation": [0,0,0,0,0,0,520,60,0,110,0,0,70],
+  "cover": {
+    "src": "/photos/balkans/dubrovnik-panorama.jpg",
+    "alt": "Dubrovnik's old town and Lokrum island from the hill above, at golden hour"
+  },
+  "route": [
+    [
+      43.508,
+      16.44
+    ],
+    [
+      43.3,
+      16.62
+    ],
+    [
+      43.37,
+      16.28
+    ],
+    [
+      43.508,
+      16.44
+    ],
+    [
+      43.172,
+      16.441
+    ],
+    [
+      42.65,
+      18.094
+    ],
+    [
+      43.856,
+      18.413
+    ],
+    [
+      43.343,
+      17.808
+    ],
+    [
+      42.424,
+      18.771
+    ],
+    [
+      41.327,
+      19.819
+    ],
+    [
+      40.64,
+      22.944
+    ],
+    [
+      36.393,
+      25.461
+    ],
+    [
+      37.942,
+      23.646
+    ]
+  ],
+  "elevation": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    520,
+    60,
+    0,
+    110,
+    0,
+    0,
+    70
+  ],
   "chapters": [
-    { "heading": "Split, and the islands", "body": "The trip starts in Split, then heads straight out to sea on a boat cruise around the islands nearby before landing back in the city.", "image": { "src": "", "alt": "Island coves off Split", "caption": "Split and the islands." } },
-    { "heading": "An afternoon on Hvar", "body": "A quick hop across to Hvar for the afternoon, then back on the water.", "image": { "src": "", "alt": "Hvar harbour in the afternoon", "caption": "Hvar." } },
-    { "heading": "By sea to Dubrovnik", "body": "The long boat ride down the coast to Dubrovnik and its city walls.", "image": { "src": "", "alt": "Dubrovnik's walls from the water", "caption": "Arriving in Dubrovnik." } },
-    { "heading": "Inland to Sarajevo and Mostar", "body": "Swapping the boat for a car and heading inland into Bosnia and Herzegovina: first Sarajevo, then Mostar and its old bridge.", "image": { "src": "", "alt": "The old bridge at Mostar", "caption": "Mostar." } },
-    { "heading": "The Bay of Kotor", "body": "Back to the coast on the road to Kotor in Montenegro, tucked deep inside its bay.", "image": { "src": "", "alt": "Mountains around the Bay of Kotor", "caption": "Kotor." } },
-    { "heading": "Tirana to Thessaloniki", "body": "Still driving: south into Albania for Tirana, then across to Thessaloniki in Greece.", "image": { "src": "", "alt": "Thessaloniki waterfront", "caption": "Thessaloniki." } },
-    { "heading": "Santorini, then Athens", "body": "A flight out to Santorini, a ferry back to Athens, and from there, home.", "image": { "src": "", "alt": "Santorini caldera at sunset", "caption": "Santorini." } }
+    {
+      "heading": "Split, and the islands",
+      "body": "The trip starts in Split, then heads straight out to sea on a boat cruise around the islands nearby before landing back in the city.",
+      "image": {
+        "src": "/photos/balkans/split-bay.jpg",
+        "alt": "The bay outside Split with mountains behind",
+        "caption": "Split and the islands."
+      }
+    },
+    {
+      "heading": "An afternoon on Hvar",
+      "body": "A quick hop across to Hvar for the afternoon, then back on the water.",
+      "image": {
+        "src": "/photos/balkans/hvar-cove.jpg",
+        "alt": "A turquoise cove on Hvar with sailboats at anchor",
+        "caption": "Hvar."
+      }
+    },
+    {
+      "heading": "By sea to Dubrovnik",
+      "body": "The long boat ride down the coast to Dubrovnik and its city walls.",
+      "image": {
+        "src": "/photos/balkans/dubrovnik-walls.jpg",
+        "alt": "Dubrovnik's stone city walls above the sea",
+        "caption": "Dubrovnik's walls."
+      }
+    },
+    {
+      "heading": "Inland to Sarajevo and Mostar",
+      "body": "Swapping the boat for a car and heading inland into Bosnia and Herzegovina: first Sarajevo, then Mostar and its old bridge.",
+      "image": {
+        "src": "/photos/balkans/mostar.jpg",
+        "alt": "Mostar spread across its valley under big clouds",
+        "caption": "Mostar from above."
+      }
+    },
+    {
+      "heading": "The Bay of Kotor",
+      "body": "Back to the coast on the road to Kotor in Montenegro, tucked deep inside its bay.",
+      "image": {
+        "src": "/photos/balkans/kotor.jpg",
+        "alt": "Kotor's old town with mountains rising behind",
+        "caption": "Kotor."
+      }
+    },
+    {
+      "heading": "Tirana to Thessaloniki",
+      "body": "Still driving: south into Albania for Tirana, then across to Thessaloniki in Greece.",
+      "image": {
+        "src": "/photos/balkans/thessaloniki.jpg",
+        "alt": "Thessaloniki's rooftops running down to the sea",
+        "caption": "Thessaloniki."
+      }
+    },
+    {
+      "heading": "Santorini, then Athens",
+      "body": "A flight out to Santorini, a ferry back to Athens, and from there, home.",
+      "image": {
+        "src": "/photos/balkans/santorini-caldera.jpg",
+        "alt": "Santorini's caldera and the deep blue Aegean",
+        "caption": "Santorini."
+      }
+    }
   ],
   "gallery": [
-    { "src": "", "alt": "Diocletian's Palace", "caption": "Split" },
-    { "src": "", "alt": "Sarajevo old town", "caption": "Sarajevo" },
-    { "src": "", "alt": "Tirana square", "caption": "Tirana" },
-    { "src": "", "alt": "Acropolis at dusk", "caption": "Athens" }
+    {
+      "src": "/photos/balkans/split-prokurative.jpg",
+      "alt": "Red arcades of the Prokurative square in Split",
+      "caption": "Split"
+    },
+    {
+      "src": "/photos/balkans/sarajevo.jpg",
+      "alt": "Sarajevo filling its valley, seen from the hills",
+      "caption": "Sarajevo"
+    },
+    {
+      "src": "/photos/balkans/kotor-cat.jpg",
+      "alt": "A ginger cat asleep on a tree branch",
+      "caption": "One of Kotor's cats"
+    },
+    {
+      "src": "/photos/balkans/tirana.jpg",
+      "alt": "Tirana's skyline with the sun low behind",
+      "caption": "Tirana"
+    },
+    {
+      "src": "/photos/balkans/santorini-red-beach.jpg",
+      "alt": "Red cliffs above a clear cove",
+      "caption": "Red Beach, Santorini"
+    },
+    {
+      "src": "/photos/balkans/acropolis-erechtheion.jpg",
+      "alt": "The Erechtheion on the Acropolis in evening light",
+      "caption": "The Acropolis"
+    },
+    {
+      "src": "/photos/balkans/athens-odeon.jpg",
+      "alt": "The Odeon of Herodes Atticus below the Acropolis",
+      "caption": "Athens"
+    }
   ]
 }
