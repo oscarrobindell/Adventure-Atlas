@@ -12,7 +12,7 @@ export default function Gallery({ photos }: { photos: (LbItem & { country: strin
   return (
     <section className="px-6 md:px-12 pt-28">
       <div className="flex flex-wrap items-end justify-between gap-6 mb-12">
-        <h1 className="display text-7xl md:text-9xl">Gal<span className="italic text-ember">lery</span></h1>
+        <h1 className="display text-7xl md:text-9xl">Gallery</h1>
         <div role="group" aria-label="Filter by place" className="flex flex-wrap gap-2">
           {places.map((t) => (
             <button key={t} onClick={() => setPlace(t)} aria-pressed={place === t}

@@ -20,10 +20,10 @@ export default function Hero({ pins, journey, items, quote, quoteBy, countries }
       <div className="relative z-10 min-h-[100svh] px-6 md:px-12 pt-28 pb-16 flex flex-col justify-between gap-12 pointer-events-none">
         <div>
           <motion.p className="eyebrow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, duration: 1 }}>
-            {items.length} adventures · {countries} countries
+            {items.length} trips · {countries} countries
           </motion.p>
-          <h1 aria-label="A life on the move." className="display text-[18vw] md:text-[8.6vw] mt-4">
-            {["A life", "on the move."].map((line, i) => (
+          <h1 aria-label="Places I've been." className="display text-[18vw] md:text-[8.6vw] mt-4">
+            {["Places", "I've been."].map((line, i) => (
               <span key={i} className="block overflow-hidden pb-[0.08em]">
                 <motion.span className={`block ${i === 1 ? "italic text-ember" : ""}`} initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ delay: 0.3 + i * 0.12, duration: 1.2, ease }}>
                   {line}
@@ -38,7 +38,7 @@ export default function Hero({ pins, journey, items, quote, quoteBy, countries }
         </div>
 
         <motion.nav aria-label="Adventures" className="pointer-events-auto max-w-xs" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2, duration: 1 }}>
-          <p className="eyebrow mb-3">Spin the globe, or pick one</p>
+          <p className="eyebrow mb-3">Trips</p>
           <ul className="border-t hairline">
             {items.map((a) => {
               const on = hover === a.slug || focus === a.slug;

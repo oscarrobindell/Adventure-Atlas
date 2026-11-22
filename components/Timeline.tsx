@@ -36,15 +36,15 @@ export default function Timeline({ adventures }: { adventures: Adventure[] }) {
     <section ref={section} style={{ height: `calc(100vh + ${dist}px)` }} className="relative">
       <div className="sticky top-0 h-screen overflow-hidden flex flex-col">
         <div className="px-6 md:px-12 pt-28 flex flex-wrap items-end justify-between gap-6">
-          <h1 className="display text-7xl md:text-9xl">Time<span className="italic text-ember">line</span></h1>
-          <div role="group" aria-label="Filter by type" className="flex flex-wrap gap-2">
+          <h1 className="display text-7xl md:text-9xl">Timeline</h1>
+          {types.length > 2 && <div role="group" aria-label="Filter by type" className="flex flex-wrap gap-2">
             {types.map((t) => (
               <button key={t} onClick={() => { setFilter(t); jump(0); }} aria-pressed={filter === t}
                 className={`eyebrow rounded-full border px-4 py-2 transition-colors ${filter === t ? "bg-bone !text-ink border-bone" : "border-bone/25 hover:border-bone"}`}>
                 {t === "all" ? "All" : typeLabel[t] ?? t}
               </button>
             ))}
-          </div>
+          </div>}
         </div>
 
         <motion.div ref={track} style={{ x }} className="flex-1 flex items-center gap-10 md:gap-16 px-6 md:px-12 w-max">
@@ -55,7 +55,7 @@ export default function Timeline({ adventures }: { adventures: Adventure[] }) {
                 {newYear && <p className="display text-[22vh] text-transparent [-webkit-text-stroke:1px_rgba(230,241,238,.35)] select-none">{a.date.slice(0, 4)}</p>}
                 <Link href={`/adventures/${a.slug}/`} className={`group block w-[72vw] md:w-[32vw] ${i % 2 ? "self-end mb-[6vh]" : "self-start mt-[4vh]"}`}>
                   <div className="aspect-[4/3] overflow-hidden"><div className="w-full h-full transition-transform duration-[1.4s] group-hover:scale-105"><Photo img={a.cover} palette={a.palette} seed={a.slug} /></div></div>
-                  <p className="eyebrow mt-4" style={{ color: palettes[a.palette].accent }}>{new Date(a.date).toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" })} · {typeLabel[a.type]}</p>
+                  <p className="eyebrow mt-4" style={{ color: palettes[a.palette].accent }}>{new Date(a.date).toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" })}</p>
                   <p className="display text-4xl md:text-5xl mt-2">{a.title}</p>
                   <p className="text-mist text-sm mt-1">{place(a)} · {a.days} days · {a.distanceKm.toLocaleString("en-US")} km</p>
                 </Link>

@@ -7,7 +7,7 @@ import Photo from "./Photo";
 import RouteMap from "./RouteMap";
 import MiniMap from "./MiniMap";
 import Lightbox, { useLightbox } from "./Lightbox";
-import { palettes, typeLabel } from "@/lib/palette";
+import { palettes } from "@/lib/palette";
 import type { Adventure } from "@/lib/types";
 import type { MapData } from "@/lib/map";
 
@@ -43,11 +43,10 @@ export default function AdventureStory({ a, next, map, minis = [] }: { a: Advent
         <motion.div className="absolute inset-0" style={{ y, scale }}><Photo img={a.cover} palette={a.palette} seed={a.slug} priority /></motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-transparent to-ink" />
         <motion.div style={{ opacity: fade }} className="absolute inset-x-0 bottom-0 px-6 md:px-12 pb-16">
-          <p className="eyebrow" style={{ color: p.accent }}>{typeLabel[a.type] ?? a.type} · {place(a)} · {new Date(a.date).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" })}</p>
+          <p className="eyebrow" style={{ color: p.accent }}>{place(a)} · {new Date(a.date).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" })}</p>
           <h1 className="display text-[19vw] md:text-[13vw] mt-3">{a.title}</h1>
           <p className="font-display italic text-2xl md:text-4xl text-bone/80 mt-2 max-w-3xl">{a.subtitle}</p>
           {a.placeholder && <p className="mt-6 inline-block eyebrow border border-dashed border-bone/30 px-3 py-1">Placeholder story · swap in your own</p>}
-          {a.draft && <p className="mt-6 inline-block eyebrow border border-dashed border-bone/30 px-3 py-1">Draft story · more to come</p>}
         </motion.div>
       </div>
 
@@ -105,7 +104,7 @@ export default function AdventureStory({ a, next, map, minis = [] }: { a: Advent
       {/* Contact sheet */}
       {a.gallery.length > 0 && (
         <section className="px-6 md:px-12 py-16 border-t hairline">
-          <p className="eyebrow mb-6">Contact sheet</p>
+          <p className="eyebrow mb-6">More photos</p>
           <div className="flex gap-4 overflow-x-auto no-scrollbar snap-x">
             {a.gallery.map((g, i) => (
               <button key={i} onClick={() => lb.open(photos, chapterImgs.length + i)} className="snap-start shrink-0 w-[70vw] md:w-[28vw] text-left cursor-zoom-in group">
@@ -122,9 +121,9 @@ export default function AdventureStory({ a, next, map, minis = [] }: { a: Advent
         <div className="absolute inset-0 transition-transform duration-[2s] group-hover:scale-105"><Photo img={next.cover} palette={next.palette} seed={next.slug} /></div>
         <div className="absolute inset-0 bg-ink/50 group-hover:bg-ink/30 transition-colors duration-700" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <p className="eyebrow !text-bone">Next adventure</p>
+          <p className="eyebrow !text-bone">Next trip</p>
           <p className="display text-7xl md:text-[10vw] mt-4">{next.title}</p>
-          <p className="eyebrow mt-4" style={{ color: palettes[next.palette].accent }}>{next.country} →</p>
+          <p className="eyebrow mt-4" style={{ color: palettes[next.palette].accent }}>{place(next)} →</p>
         </div>
       </Link>
       <Lightbox {...lb} palette={a.palette} seed={a.slug} />

@@ -6,7 +6,7 @@ import { getProfile } from "@/lib/content";
 const profile = getProfile();
 
 export const metadata: Metadata = {
-  title: { default: `${profile.name} — Field Atlas`, template: `%s · ${profile.name}` },
+  title: { default: `${profile.name} — Travels`, template: `%s · ${profile.name}` },
   description: profile.intro,
 };
 
@@ -19,8 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <footer className="border-t hairline px-6 md:px-12 py-16 mt-32 flex flex-col md:flex-row gap-8 justify-between">
           <div>
-            <p className="display text-5xl md:text-7xl">{profile.tagline}</p>
-            <p className="eyebrow mt-4">{profile.location}</p>
+            <p className="display text-5xl md:text-7xl">{profile.name}</p>
           </div>
           <ul className="flex gap-6 items-end">
             {profile.socials.filter((s) => s.href !== "#").map((s) => (
@@ -28,7 +27,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             ))}
           </ul>
         </footer>
-        <div className="grain" aria-hidden />
       </body>
     </html>
   );
