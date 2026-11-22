@@ -25,7 +25,7 @@ export default function Home() {
     { v: s.days, l: "Days out there" },
     { v: s.nightsOutside, l: "Nights under the stars" },
     { v: s.highest, l: "Highest point (m)" },
-  ];
+  ].filter((x) => x.v > (x.l.startsWith("Highest") ? 1000 : 0));
 
   return (
     <>
