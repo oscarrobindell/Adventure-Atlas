@@ -23,8 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p className="eyebrow mt-4">{profile.location}</p>
           </div>
           <ul className="flex gap-6 items-end">
-            {profile.socials.map((s) => (
-              <li key={s.label}><a className="eyebrow hover:text-bone transition-colors" href={s.href}>{s.label} ↗</a></li>
+            {profile.socials.filter((s) => s.href !== "#").map((s) => (
+              <li key={s.label}><a className="eyebrow hover:text-bone transition-colors" href={s.href} {...(s.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{s.label} ↗</a></li>
             ))}
           </ul>
         </footer>

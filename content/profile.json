@@ -1,12 +1,20 @@
 {
-  "_note": "PLACEHOLDER — replace with your real details.",
   "name": "Oscar",
   "tagline": "Collecting horizons.",
   "intro": "A living atlas of the places that rearranged me: summits, coastlines, long roads and quiet nights under too many stars.",
   "location": "Somewhere between trailheads",
   "socials": [
-    { "label": "Instagram", "href": "#" },
-    { "label": "Strava", "href": "#" },
-    { "label": "Email", "href": "#" }
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/oscarrobindell/"
+    },
+    {
+      "label": "Strava",
+      "href": "#"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:oscar.robindell@gmail.com"
+    }
   ]
 }
