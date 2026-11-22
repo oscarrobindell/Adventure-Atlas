@@ -20,6 +20,7 @@ export default function MiniMap({ map, accent, caption }: { map: MapData; accent
           </defs>
           <path d={map.land} fill="#e6f1ee" fillOpacity="0.08" stroke="#e6f1ee" strokeOpacity="0.28" strokeWidth="0.8" />
           <path d={map.borders} fill="none" stroke="#e6f1ee" strokeOpacity="0.18" strokeWidth="0.7" strokeDasharray="3 3" />
+          {map.water && <path d={map.water} fill="#4fb8ff" fillOpacity="0.22" stroke="#4fb8ff" strokeOpacity="0.45" strokeWidth="0.7" />}
           {map.legs.map((l, i) => (
             <g key={i}>
               <path d={l.d} fill="none" stroke="#e6f1ee" strokeOpacity="0.12" strokeWidth="2.6" strokeDasharray={dash[l.mode]} strokeLinecap="round" />

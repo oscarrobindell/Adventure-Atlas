@@ -39,6 +39,7 @@ export default function RouteMap({ map, elevation, progress, accent, unit = "m" 
         <g clipPath={`url(#${uid}c)`}>
           <path d={map.land} fill="#e6f1ee" fillOpacity="0.07" stroke="#e6f1ee" strokeOpacity="0.22" strokeWidth="0.7" />
           <path d={map.borders} fill="none" stroke="#e6f1ee" strokeOpacity="0.16" strokeWidth="0.6" strokeDasharray="3 3" />
+          {map.water && <path d={map.water} fill="#4fb8ff" fillOpacity="0.22" stroke="#4fb8ff" strokeOpacity="0.45" strokeWidth="0.7" />}
           {map.legs.map((l, i) => <Leg key={i} leg={l} progress={progress} accent={accent} id={`${uid}m${i}`} />)}
           {map.stops.map((s, i) => (
             <g key={i}>

@@ -7,7 +7,7 @@ import type { Adventure, MiniMapSpec } from "./types";
 /** Everything the route map needs, pre-projected on the server so no geodata ships to the browser. */
 export type MapData = {
   w: number; h: number;
-  land: string; borders: string;
+  land: string; borders: string; water: string;
   legs: { mode: string; d: string; from: number; to: number }[]; // from/to: share of the whole journey (0–1)
   stops: { name: string; x: number; y: number; anchor: "start" | "end" }[];
 };
@@ -22,16 +22,16 @@ export function buildMap(a: Adventure, w = 600, h = 520): MapData {
     { name: "Start", coords: a.route[0] },
     { name: "Finish", coords: a.route[a.route.length - 1] },
   ];
-  return project(legs, stops, legs.flatMap((l) => l.path), w, h, 36);
+  return project(legs, stops, legs.flatMap((l) => l.path), w, h, 36, a.water);
 }
 
 /** A small map for a single day: fitted to the given bounds rather than to the legs. */
 export function buildMiniMap(m: MiniMapSpec, w = 600, h = 375): MapData {
   const [[a, b], [c, d]] = m.bounds;
-  return project(m.legs ?? [], m.stops, [[a, b], [c, d], [a, d], [c, b]], w, h, 0);
+  return project(m.legs ?? [], m.stops, [[a, b], [c, d], [a, d], [c, b]], w, h, 0, m.water);
 }
 
-function project(legs: { mode: string; path: [number, number][] }[], stops: { name: string; coords: [number, number]; anchor?: "start" | "end" }[], all: [number, number][], w: number, h: number, pad: number): MapData {
+function project(legs: { mode: string; path: [number, number][] }[], stops: { name: string; coords: [number, number]; anchor?: "start" | "end" }[], all: [number, number][], w: number, h: number, pad: number, water: [number, number][][] = []): MapData {
   const line = { type: "MultiPoint" as const, coordinates: all.map(([la, lo]) => [lo, la]) };
   const proj = geoMercator().fitExtent([[pad, pad], [w - pad, h - pad]], line);
   proj.clipExtent([[-10, -10], [w + 10, h + 10]]);
@@ -57,8 +57,11 @@ function project(legs: { mode: string; path: [number, number][] }[], stops: { na
   let acc = 0;
   const outLegs = projected.map((l) => { const from = acc / total; acc += l.len; return { mode: l.mode, d: l.d, from, to: acc / total }; });
 
+  // Lakes are projected flat (no spherical winding rules) since they only matter at local scale.
+  const waterD = water.map((ring) => "M" + ring.map(([la, lo]) => proj([lo, la])!.map((v) => v.toFixed(1)).join(",")).join("L") + "Z").join("");
+
   return {
-    w, h, land, borders, legs: outLegs,
+    w, h, land, borders, water: waterD, legs: outLegs,
     stops: stops.map((s) => { const [x, y] = proj([s.coords[1], s.coords[0]])!; return { name: s.name, x, y, anchor: s.anchor ?? (x > w * 0.7 ? "end" : "start") }; }),
   };
 }

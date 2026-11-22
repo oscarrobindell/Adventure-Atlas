@@ -29,6 +29,8 @@ export type Adventure = {
   route: [number, number][];
   /** Optional per-leg travel modes for an accurate map: car, boat, plane, trail. */
   legs?: { mode: string; path: [number, number][] }[];
+  /** Lakes drawn on the route map (OpenStreetMap outlines), for local trips where coastlines say nothing. */
+  water?: [number, number][][];
   /** Named stops shown on the map. */
   stops?: { name: string; coords: [number, number]; anchor?: "start" | "end" }[];
   elevation: number[];
@@ -60,6 +62,7 @@ export type MiniMapSpec = {
   bounds: [[number, number], [number, number]]; // [lat, lng] corners the map is fitted to
   legs?: { mode: string; path: [number, number][] }[];
   stops: { name: string; coords: [number, number]; anchor?: "start" | "end" }[];
+  water?: [number, number][][];
 };
 
 export type GearItem = { name: string; href: string; note?: string };
