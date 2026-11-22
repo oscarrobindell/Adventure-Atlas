@@ -18,8 +18,8 @@ function Leg({ leg, progress, accent, id }: { leg: MapData["legs"][number]; prog
       <mask id={id} maskUnits="userSpaceOnUse">
         <motion.path d={leg.d} fill="none" stroke="#fff" strokeWidth={12} strokeLinecap="round" strokeLinejoin="round" style={{ pathLength: len }} />
       </mask>
-      <path d={leg.d} fill="none" stroke="#efe9df" strokeOpacity="0.14" strokeWidth={s.width} strokeDasharray={s.dash} strokeLinecap="round" strokeLinejoin="round" />
-      <path d={leg.d} fill="none" stroke={s.muted ? "#efe9df" : accent} strokeWidth={s.width} strokeDasharray={s.dash} strokeLinecap="round" strokeLinejoin="round" mask={`url(#${id})`} />
+      <path d={leg.d} fill="none" stroke="#e6f1ee" strokeOpacity="0.14" strokeWidth={s.width} strokeDasharray={s.dash} strokeLinecap="round" strokeLinejoin="round" />
+      <path d={leg.d} fill="none" stroke={s.muted ? "#e6f1ee" : accent} strokeWidth={s.width} strokeDasharray={s.dash} strokeLinecap="round" strokeLinejoin="round" mask={`url(#${id})`} />
     </g>
   );
 }
@@ -37,14 +37,14 @@ export default function RouteMap({ map, elevation, progress, accent, unit = "m" 
           <clipPath id={`${uid}c`}><rect width={map.w} height={map.h} rx="2" /></clipPath>
         </defs>
         <g clipPath={`url(#${uid}c)`}>
-          <path d={map.land} fill="#efe9df" fillOpacity="0.07" stroke="#efe9df" strokeOpacity="0.22" strokeWidth="0.7" />
-          <path d={map.borders} fill="none" stroke="#efe9df" strokeOpacity="0.16" strokeWidth="0.6" strokeDasharray="3 3" />
+          <path d={map.land} fill="#e6f1ee" fillOpacity="0.07" stroke="#e6f1ee" strokeOpacity="0.22" strokeWidth="0.7" />
+          <path d={map.borders} fill="none" stroke="#e6f1ee" strokeOpacity="0.16" strokeWidth="0.6" strokeDasharray="3 3" />
           {map.legs.map((l, i) => <Leg key={i} leg={l} progress={progress} accent={accent} id={`${uid}m${i}`} />)}
           {map.stops.map((s, i) => (
             <g key={i}>
-              <circle cx={s.x} cy={s.y} r="4" fill="#07090b" stroke={accent} strokeWidth="1.8" />
-              <text x={s.x + (s.anchor === "end" ? -9 : 9)} y={s.y + 3.5} textAnchor={s.anchor} fill="#efe9df" fillOpacity="0.75" fontSize="10.5" fontFamily="var(--font-mono)" letterSpacing="1.2"
-                stroke="#07090b" strokeWidth="3" paintOrder="stroke">{s.name.toUpperCase()}</text>
+              <circle cx={s.x} cy={s.y} r="4" fill="#061520" stroke={accent} strokeWidth="1.8" />
+              <text x={s.x + (s.anchor === "end" ? -9 : 9)} y={s.y + 3.5} textAnchor={s.anchor} fill="#e6f1ee" fillOpacity="0.75" fontSize="10.5" fontFamily="var(--font-mono)" letterSpacing="1.2"
+                stroke="#061520" strokeWidth="3" paintOrder="stroke">{s.name.toUpperCase()}</text>
             </g>
           ))}
         </g>
@@ -53,7 +53,7 @@ export default function RouteMap({ map, elevation, progress, accent, unit = "m" 
         <ul className="flex flex-wrap gap-x-6 gap-y-2 mt-3">
           {modes.map((m) => (
             <li key={m} className="eyebrow flex items-center gap-2">
-              <svg width="28" height="6" aria-hidden><line x1="1" y1="3" x2="27" y2="3" stroke={style[m]?.muted ? "#efe9df" : accent} strokeWidth="2.4" strokeDasharray={style[m]?.dash} strokeLinecap="round" /></svg>
+              <svg width="28" height="6" aria-hidden><line x1="1" y1="3" x2="27" y2="3" stroke={style[m]?.muted ? "#e6f1ee" : accent} strokeWidth="2.4" strokeDasharray={style[m]?.dash} strokeLinecap="round" /></svg>
               {style[m]?.label ?? m}
             </li>
           ))}
@@ -79,8 +79,8 @@ function Elevation({ elevation, progress, accent, unit }: { elevation: number[];
       <div className="flex justify-between eyebrow mb-2"><span>Elevation</span><motion.span className="text-bone">{current}</motion.span></div>
       <div className="relative">
         <svg viewBox={`0 0 ${EW} ${EH}`} className="w-full block" preserveAspectRatio="none" aria-hidden>
-          <path d={`${eLine}L${EW},${EH}L0,${EH}Z`} fill="#efe9df" fillOpacity="0.05" />
-          <path d={eLine} fill="none" stroke="#efe9df" strokeOpacity="0.25" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+          <path d={`${eLine}L${EW},${EH}L0,${EH}Z`} fill="#e6f1ee" fillOpacity="0.05" />
+          <path d={eLine} fill="none" stroke="#e6f1ee" strokeOpacity="0.25" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
         </svg>
         <motion.svg viewBox={`0 0 ${EW} ${EH}`} className="w-full block absolute inset-0" preserveAspectRatio="none" style={{ clipPath: clip }} aria-hidden>
           <path d={`${eLine}L${EW},${EH}L0,${EH}Z`} fill={accent} fillOpacity="0.18" />

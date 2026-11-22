@@ -8,14 +8,15 @@
   --font-display: "Fraunces Variable", Georgia, serif;
   --font-sans: "Inter Variable", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --color-ink: #07090b;
-  --color-bone: #efe9df;
-  --color-mist: #9aa3a8;
-  --color-ember: #ff9e6d;
+  --color-ink: #061520;
+  --color-bone: #e6f1ee;
+  --color-mist: #8ea9ad;
+  --color-ember: #5fe3a1;
+  --color-sea: #4fb8ff;
 }
 
 :root { color-scheme: dark; }
-html { background: var(--color-ink); color: var(--color-bone); scroll-behavior: smooth; }
+html { background: var(--color-ink) radial-gradient(ellipse 120% 60% at 50% 0%, #0b2a3a 0%, transparent 60%) no-repeat; color: var(--color-bone); scroll-behavior: smooth; }
 body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 ::selection { background: var(--color-ember); color: var(--color-ink); }
 
@@ -28,7 +29,7 @@ body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overf
   animation: grain 1.2s steps(6) infinite; }
 @keyframes grain { 0%,100%{transform:translate(0,0)} 20%{transform:translate(-3%,2%)} 40%{transform:translate(2%,-4%)} 60%{transform:translate(-4%,1%)} 80%{transform:translate(3%,3%)} }
 
-.hairline { border-color: rgb(239 233 223 / 0.12); }
+.hairline { border-color: rgb(230 241 238 / 0.12); }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 

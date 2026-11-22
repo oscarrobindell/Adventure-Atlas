@@ -52,7 +52,7 @@ export default function Timeline({ adventures }: { adventures: Adventure[] }) {
             const newYear = i === 0 || list[i - 1].date.slice(0, 4) !== a.date.slice(0, 4);
             return (
               <div key={a.slug} className="flex items-center gap-10 md:gap-16">
-                {newYear && <p className="display text-[22vh] text-transparent [-webkit-text-stroke:1px_rgba(239,233,223,.35)] select-none">{a.date.slice(0, 4)}</p>}
+                {newYear && <p className="display text-[22vh] text-transparent [-webkit-text-stroke:1px_rgba(230,241,238,.35)] select-none">{a.date.slice(0, 4)}</p>}
                 <Link href={`/adventures/${a.slug}/`} className={`group block w-[72vw] md:w-[32vw] ${i % 2 ? "self-end mb-[6vh]" : "self-start mt-[4vh]"}`}>
                   <div className="aspect-[4/3] overflow-hidden"><div className="w-full h-full transition-transform duration-[1.4s] group-hover:scale-105"><Photo img={a.cover} palette={a.palette} seed={a.slug} /></div></div>
                   <p className="eyebrow mt-4" style={{ color: palettes[a.palette].accent }}>{new Date(a.date).toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" })} · {typeLabel[a.type]}</p>

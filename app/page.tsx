@@ -14,7 +14,7 @@ export default function Home() {
 
   const pins = [
     ...adventures.map((a) => ({ id: a.slug, title: a.title, sub: `${a.countries ? a.region : a.country} · ${a.date.slice(0, 4)}`, lat: a.coords[0], lng: a.coords[1], color: palettes[a.palette].accent, href: `/adventures/${a.slug}/` })),
-    ...bucket.map((b) => ({ id: `dream-${b.title}`, title: b.title, sub: `${b.country} · ${b.when}`, lat: b.coords[0], lng: b.coords[1], color: "#9aa3a8", dream: true })),
+    ...bucket.map((b) => ({ id: `dream-${b.title}`, title: b.title, sub: `${b.country} · ${b.when}`, lat: b.coords[0], lng: b.coords[1], color: "#8ea9ad", dream: true })),
   ];
   const journey = [...adventures].reverse().map((a) => a.slug);
 

@@ -14,15 +14,15 @@ export default function MiniMap({ map, accent, caption }: { map: MapData; accent
         <svg viewBox={`0 0 ${map.w} ${map.h}`} className="w-full h-full" role="img" aria-label={`Map: ${map.stops.map((s) => s.name).join(", ")}`}>
           <defs>
             <radialGradient id={`${uid}v`} cx="50%" cy="50%" r="75%">
-              <stop offset="60%" stopColor="#07090b" stopOpacity="0" />
-              <stop offset="100%" stopColor="#07090b" stopOpacity="0.55" />
+              <stop offset="60%" stopColor="#061520" stopOpacity="0" />
+              <stop offset="100%" stopColor="#061520" stopOpacity="0.55" />
             </radialGradient>
           </defs>
-          <path d={map.land} fill="#efe9df" fillOpacity="0.08" stroke="#efe9df" strokeOpacity="0.28" strokeWidth="0.8" />
-          <path d={map.borders} fill="none" stroke="#efe9df" strokeOpacity="0.18" strokeWidth="0.7" strokeDasharray="3 3" />
+          <path d={map.land} fill="#e6f1ee" fillOpacity="0.08" stroke="#e6f1ee" strokeOpacity="0.28" strokeWidth="0.8" />
+          <path d={map.borders} fill="none" stroke="#e6f1ee" strokeOpacity="0.18" strokeWidth="0.7" strokeDasharray="3 3" />
           {map.legs.map((l, i) => (
             <g key={i}>
-              <path d={l.d} fill="none" stroke="#efe9df" strokeOpacity="0.12" strokeWidth="2.6" strokeDasharray={dash[l.mode]} strokeLinecap="round" />
+              <path d={l.d} fill="none" stroke="#e6f1ee" strokeOpacity="0.12" strokeWidth="2.6" strokeDasharray={dash[l.mode]} strokeLinecap="round" />
               <mask id={`${uid}m${i}`} maskUnits="userSpaceOnUse">
                 <motion.path d={l.d} fill="none" stroke="#fff" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round"
                   initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true, margin: "-20% 0px" }}
@@ -34,9 +34,9 @@ export default function MiniMap({ map, accent, caption }: { map: MapData; accent
           <rect width={map.w} height={map.h} fill={`url(#${uid}v)`} />
           {map.stops.map((s, i) => (
             <g key={i}>
-              <circle cx={s.x} cy={s.y} r="5" fill="#07090b" stroke={accent} strokeWidth="2" />
-              <text x={s.x + (s.anchor === "end" ? -11 : 11)} y={s.y + 4} textAnchor={s.anchor} fill="#efe9df" fillOpacity="0.85" fontSize="12.5"
-                fontFamily="var(--font-mono)" letterSpacing="1.4" stroke="#07090b" strokeWidth="3.5" paintOrder="stroke">{s.name.toUpperCase()}</text>
+              <circle cx={s.x} cy={s.y} r="5" fill="#061520" stroke={accent} strokeWidth="2" />
+              <text x={s.x + (s.anchor === "end" ? -11 : 11)} y={s.y + 4} textAnchor={s.anchor} fill="#e6f1ee" fillOpacity="0.85" fontSize="12.5"
+                fontFamily="var(--font-mono)" letterSpacing="1.4" stroke="#061520" strokeWidth="3.5" paintOrder="stroke">{s.name.toUpperCase()}</text>
             </g>
           ))}
         </svg>

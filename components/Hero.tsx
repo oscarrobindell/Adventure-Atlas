@@ -15,7 +15,7 @@ export default function Hero({ pins, journey, items, name, intro, countries }: {
       <div className="absolute inset-0 top-[30%] opacity-50 md:opacity-100 md:top-0 md:left-[28%]">
         <Globe pins={pins} journey={journey} focus={focus} onHover={setHover} />
       </div>
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_70%_50%,transparent_30%,#07090b_80%)]" />
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_70%_50%,transparent_30%,#061520_80%)]" />
 
       <div className="relative z-10 min-h-[100svh] px-6 md:px-12 pt-28 pb-16 flex flex-col justify-between gap-12 pointer-events-none">
         <div>

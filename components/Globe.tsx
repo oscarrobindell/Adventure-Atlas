@@ -13,7 +13,7 @@ const toVec = (lat: number, lng: number, r = R) => {
 const facing = (lat: number, lng: number) => ({ x: (lat * Math.PI) / 180, y: -Math.PI / 2 - (lng * Math.PI) / 180 });
 const wrap = (a: number) => Math.atan2(Math.sin(a), Math.cos(a));
 
-/** Interactive dotted globe. Drag to spin, click a glowing pin to fly in. `focus` (pin id) turns the globe to that pin. */
+/** Interactive textured Earth. Drag to spin, click a glowing pin to fly in. `focus` (pin id) turns the globe to that pin. */
 export default function Globe({ pins, journey, focus, onHover }: { pins: GlobePin[]; journey: string[]; focus?: string | null; onHover?: (id: string | null) => void }) {
   const mount = useRef<HTMLDivElement>(null);
   const label = useRef<HTMLDivElement>(null);
@@ -41,30 +41,37 @@ export default function Globe({ pins, journey, focus, onHover }: { pins: GlobePi
     globe.rotation.order = "XYZ";
     scene.add(globe);
 
-    // Dark core hides dots on the far side.
-    globe.add(new THREE.Mesh(new THREE.SphereGeometry(R * 0.995, 64, 64), new THREE.MeshBasicMaterial({ color: 0x0a0f12 })));
+    // Realistic Earth: NASA Blue Marble colour, relief bump, shiny oceans, drifting clouds.
+    const base = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/globe`;
+    const loader = new THREE.TextureLoader();
+    const tex = (f: string, srgb = false) => { const t = loader.load(`${base}/${f}`, () => { loaded++; if (loaded >= 2) setReady(true); }); if (srgb) t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+    let loaded = 0;
+    const earthMat = new THREE.MeshPhongMaterial({
+      map: tex("earth-day.jpg", true), bumpMap: tex("earth-bump.jpg"), bumpScale: 0.6,
+      specularMap: tex("earth-water.jpg"), specular: new THREE.Color("#3a6f8f"), shininess: 18,
+    });
+    globe.add(new THREE.Mesh(new THREE.SphereGeometry(R, 96, 96), earthMat));
+    const clouds = new THREE.Mesh(
+      new THREE.SphereGeometry(R * 1.008, 96, 96),
+      new THREE.MeshPhongMaterial({ color: 0xffffff, alphaMap: tex("earth-clouds.jpg"), transparent: true, opacity: 0.55, depthWrite: false }),
+    );
+    globe.add(clouds);
+
+    // Light: soft fill plus a low "sun" from the upper left so the globe has a day side.
+    scene.add(new THREE.AmbientLight(0xbfd8ff, 1.1));
+    const sun = new THREE.DirectionalLight(0xffffff, 2.2); sun.position.set(-3, 1.6, 3); scene.add(sun);
 
     // Atmosphere: back-side fresnel glow.
     const atmo = new THREE.Mesh(
       new THREE.SphereGeometry(R * 1.1, 64, 64),
       new THREE.ShaderMaterial({
         side: THREE.BackSide, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false,
-        uniforms: { c: { value: new THREE.Color("#ff9e6d") } },
+        uniforms: { c: { value: new THREE.Color("#4fb8ff") } },
         vertexShader: `varying vec3 vN; void main(){ vN = normalize(normalMatrix*normal); gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
-        fragmentShader: `uniform vec3 c; varying vec3 vN; void main(){ float i = pow(0.62 - dot(vN, vec3(0,0,1.)), 4.0); gl_FragColor = vec4(c, 1.) * i * 1.6; }`,
+        fragmentShader: `uniform vec3 c; varying vec3 vN; void main(){ float i = pow(0.62 - dot(vN, vec3(0,0,1.)), 4.0); gl_FragColor = vec4(c, 1.) * i * 1.8; }`,
       })
     );
     scene.add(atmo);
-
-    // Land dots.
-    const dotMat = new THREE.PointsMaterial({ color: 0xefe9df, size: 0.014, sizeAttenuation: true, transparent: true, opacity: 0 });
-    fetch(`${process.env.NEXT_PUBLIC_BASE_PATH}/land-dots.json`).then((r) => r.json()).then((d: number[]) => {
-      const pos = new Float32Array((d.length / 2) * 3);
-      for (let i = 0; i < d.length; i += 2) { const v = toVec(d[i], d[i + 1], R * 1.001); pos.set([v.x, v.y, v.z], (i / 2) * 3); }
-      const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
-      globe.add(new THREE.Points(g, dotMat));
-      setReady(true);
-    });
 
     // Pins.
     const hits: THREE.Mesh[] = [];
@@ -97,7 +104,7 @@ export default function Globe({ pins, journey, focus, onHover }: { pins: GlobePi
       mid.normalize().multiplyScalar(R + va.distanceTo(vb) * 0.45);
       const pts = new THREE.QuadraticBezierCurve3(va, mid, vb).getPoints(80);
       const g = new THREE.BufferGeometry().setFromPoints(pts); g.setDrawRange(0, 0);
-      const line = new THREE.Line(g, new THREE.LineBasicMaterial({ color: 0xefe9df, transparent: true, opacity: 0.35 }));
+      const line = new THREE.Line(g, new THREE.LineBasicMaterial({ color: 0xe8fff6, transparent: true, opacity: 0.6 }));
       globe.add(line); arcs.push(line);
     }
 
@@ -172,7 +179,7 @@ export default function Globe({ pins, journey, focus, onHover }: { pins: GlobePi
       rot.x += (tgt.x - rot.x) * 0.08; rot.y += (tgt.y - rot.y) * 0.08;
       globe.rotation.set(rot.x, rot.y, 0);
       camZ += (camZTarget - camZ) * 0.06; camera.position.z = camZ;
-      dotMat.opacity = Math.min(0.75, dotMat.opacity + dt * 0.6);
+      if (!reduce) clouds.rotation.y += dt * 0.008;
       rings.forEach(({ m, o, dream }) => {
         const k = reduce ? 0.5 : ((t0 * 0.6 + o) % 1);
         const s = 1 + k * (dream ? 1.2 : 2.6); m.scale.set(s, s, s);
