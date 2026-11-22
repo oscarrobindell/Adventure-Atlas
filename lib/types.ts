@@ -1,4 +1,4 @@
-export type Img = { src: string; alt: string; caption?: string };
+export type Img = { src: string; alt: string; caption?: string; portrait?: boolean };
 export type PaletteName = "dusk" | "glacier" | "forest" | "ocean" | "desert" | "adriatic";
 
 export type Adventure = {

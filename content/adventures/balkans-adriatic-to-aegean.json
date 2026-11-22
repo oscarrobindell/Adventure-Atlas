@@ -146,7 +146,13 @@
       "bullets": [
         "Day three of the sailing trip",
         "Krka National Park and its waterfalls"
-      ]
+      ],
+      "image": {
+        "src": "/photos/balkans/krka.jpg",
+        "alt": "A waterfall spilling over mossy rocks at Krka",
+        "caption": "Krka National Park.",
+        "portrait": true
+      }
     },
     {
       "label": "Day 6 · Fri, Jul 3",
@@ -155,7 +161,13 @@
         "Midday in Šibenik's old town",
         "Sailing trip ends at Tribunj at 5 pm",
         "Back to Split for the night"
-      ]
+      ],
+      "image": {
+        "src": "/photos/balkans/sibenik.jpg",
+        "alt": "A narrow sunlit stone lane in Šibenik",
+        "caption": "Šibenik old town.",
+        "portrait": true
+      }
     },
     {
       "label": "Day 7 · Sat, Jul 4",
@@ -163,7 +175,12 @@
       "bullets": [
         "Up to Klis Fortress, in the hills above Split",
         "Views over Split and out to the islands"
-      ]
+      ],
+      "image": {
+        "src": "/photos/balkans/klis.jpg",
+        "alt": "A tiled stone roof at Klis Fortress with Split below",
+        "caption": "Klis Fortress, above Split."
+      }
     },
     {
       "label": "Day 8 · Sun, Jul 5",
@@ -175,7 +192,7 @@
       ],
       "image": {
         "src": "/photos/balkans/hvar-cove.jpg",
-        "alt": "A turquoise cove on Hvar with sailboats at anchor",
+        "alt": "A turquoise cove on Hvar with yachts at anchor",
         "caption": "Hvar."
       }
     },
@@ -188,7 +205,7 @@
       ],
       "image": {
         "src": "/photos/balkans/dubrovnik-walls.jpg",
-        "alt": "Dubrovnik's stone city walls above the sea",
+        "alt": "Dubrovnik's city walls against a clear sky",
         "caption": "Dubrovnik's walls."
       }
     },
@@ -197,8 +214,13 @@
       "heading": "Across the border",
       "bullets": [
         "Drove out of Dubrovnik through Neum",
-        "Up through Herzegovina to Sarajevo"
-      ]
+        "Up the Neretva valley to Sarajevo"
+      ],
+      "image": {
+        "src": "/photos/balkans/neretva.jpg",
+        "alt": "A bridge over the green Neretva river below forested mountains",
+        "caption": "The Neretva valley."
+      }
     },
     {
       "label": "Day 11 · Wed, Jul 8",
@@ -210,7 +232,7 @@
       "image": {
         "src": "/photos/balkans/sarajevo.jpg",
         "alt": "Sarajevo filling its valley, seen from the hills",
-        "caption": "Sarajevo"
+        "caption": "Sarajevo from above."
       }
     },
     {
@@ -224,7 +246,7 @@
       ],
       "image": {
         "src": "/photos/balkans/mostar.jpg",
-        "alt": "Mostar spread across its valley under big clouds",
+        "alt": "Mostar spread across the valley, seen from the hill above",
         "caption": "Mostar from above."
       }
     },
@@ -237,7 +259,12 @@
         "Počitelj",
         "Kravice Waterfalls",
         "Back to Mostar"
-      ]
+      ],
+      "image": {
+        "src": "/photos/balkans/mostar-bridge.jpg",
+        "alt": "Mostar's Old Bridge lit up at dusk",
+        "caption": "The Old Bridge at dusk."
+      }
     },
     {
       "label": "Day 14 · Sat, Jul 11",
@@ -258,7 +285,12 @@
       "bullets": [
         "Boat trip around the Bay of Kotor",
         "Into the old submarine tunnels near Kumbor"
-      ]
+      ],
+      "image": {
+        "src": "/photos/balkans/kotor-tunnels.jpg",
+        "alt": "A boat inside a rock-cut submarine tunnel",
+        "caption": "The submarine tunnels near Kumbor."
+      }
     },
     {
       "label": "Day 16 · Mon, Jul 13",
@@ -270,7 +302,7 @@
       "image": {
         "src": "/photos/balkans/tirana.jpg",
         "alt": "Tirana's skyline with the sun low behind",
-        "caption": "Tirana"
+        "caption": "Tirana."
       }
     },
     {
@@ -278,8 +310,13 @@
       "heading": "Tirana to Thessaloniki",
       "bullets": [
         "Long drive across Albania into Greece",
-        "Arrived in Thessaloniki"
-      ]
+        "Evening among the Roman palace ruins in Thessaloniki"
+      ],
+      "image": {
+        "src": "/photos/balkans/thessaloniki-ruins.jpg",
+        "alt": "Roman palace ruins surrounded by apartment blocks",
+        "caption": "Roman ruins in Thessaloniki."
+      }
     },
     {
       "label": "Day 18 · Wed, Jul 15",
@@ -312,7 +349,7 @@
       "image": {
         "src": "/photos/balkans/santorini-red-beach.jpg",
         "alt": "Red cliffs above a clear cove",
-        "caption": "Red Beach, Santorini"
+        "caption": "Red Beach."
       }
     },
     {
@@ -323,8 +360,8 @@
       ],
       "image": {
         "src": "/photos/balkans/santorini-caldera.jpg",
-        "alt": "Santorini's caldera and the deep blue Aegean",
-        "caption": "Santorini."
+        "alt": "Santorini's caldera from the rim",
+        "caption": "The caldera."
       }
     },
     {
@@ -332,7 +369,13 @@
       "heading": "Kayaking",
       "bullets": [
         "Sea kayaking trip with a picnic lunch"
-      ]
+      ],
+      "image": {
+        "src": "/photos/balkans/sea-cave.jpg",
+        "alt": "Light pouring into a sea cave over green water",
+        "caption": "Into a sea cave by kayak.",
+        "portrait": true
+      }
     },
     {
       "label": "Day 23 · Mon, Jul 20",
@@ -351,15 +394,21 @@
       "image": {
         "src": "/photos/balkans/acropolis-erechtheion.jpg",
         "alt": "The Erechtheion on the Acropolis in evening light",
-        "caption": "The Acropolis"
+        "caption": "The Acropolis."
       }
     },
     {
       "label": "Day 25 · Wed, Jul 22",
       "heading": "Athens",
       "bullets": [
-        "Last full day in Athens"
-      ]
+        "Last full day in Athens",
+        "Ancient reliefs in one of the city's museums"
+      ],
+      "image": {
+        "src": "/photos/balkans/athens-museum.jpg",
+        "alt": "An ancient marble relief of a procession",
+        "caption": "Ancient reliefs, Athens."
+      }
     },
     {
       "label": "Day 26 · Thu, Jul 23",

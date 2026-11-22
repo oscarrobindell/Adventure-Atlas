@@ -86,7 +86,7 @@ export default function AdventureStory({ a, next, map }: { a: Adventure; next: A
               </motion.div>
               {c.image && (
               <motion.figure className="mt-10" initial={{ clipPath: "inset(12% 12% 12% 12%)" }} whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }} viewport={{ once: true, margin: "-10% 0px" }} transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}>
-                <button className="block w-full aspect-[16/10] overflow-hidden cursor-zoom-in" onClick={() => lb.open(photos, imgIndex(i))} aria-label={`Open photo: ${c.image.alt}`}>
+                <button className={`block overflow-hidden cursor-zoom-in ${c.image.portrait ? "aspect-[4/5] w-full md:w-3/5" : "w-full aspect-[16/10]"}`} onClick={() => lb.open(photos, imgIndex(i))} aria-label={`Open photo: ${c.image.alt}`}>
                   <Photo img={c.image} palette={a.palette} seed={`${a.slug}${i}`} />
                 </button>
                 {c.image.caption && <figcaption className="eyebrow mt-3">{c.image.caption}</figcaption>}
