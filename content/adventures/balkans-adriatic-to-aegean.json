@@ -137,30 +137,32 @@
       "heading": "On the catamaran",
       "bullets": [
         "Day two of the sailing trip",
-        "Sailing the islands off the Dalmatian coast"
+        "Island-hopping off the coast near Šibenik"
       ]
     },
     {
       "label": "Day 5 · Thu, Jul 2",
-      "heading": "Still sailing",
+      "heading": "Krka waterfalls",
       "bullets": [
         "Day three of the sailing trip",
-        "Another night aboard"
+        "Krka National Park and its waterfalls"
       ]
     },
     {
       "label": "Day 6 · Fri, Jul 3",
-      "heading": "Back on land",
+      "heading": "Šibenik, then back on land",
       "bullets": [
+        "Midday in Šibenik's old town",
         "Sailing trip ends at Tribunj at 5 pm",
         "Back to Split for the night"
       ]
     },
     {
       "label": "Day 7 · Sat, Jul 4",
-      "heading": "Split",
+      "heading": "Klis Fortress",
       "bullets": [
-        "A free day back in Split"
+        "Up to Klis Fortress, in the hills above Split",
+        "Views over Split and out to the islands"
       ]
     },
     {
@@ -251,9 +253,10 @@
     },
     {
       "label": "Day 15 · Sun, Jul 12",
-      "heading": "Kotor",
+      "heading": "Bay of Kotor by boat",
       "bullets": [
-        "A full day in Kotor"
+        "Boat trip around the Bay of Kotor",
+        "Into the old submarine tunnels near Kumbor"
       ]
     },
     {
@@ -315,7 +318,7 @@
       "label": "Day 21 · Sat, Jul 18",
       "heading": "The caldera",
       "bullets": [
-        "Morning above the caldera"
+        "Morning on the caldera rim near Oia"
       ],
       "image": {
         "src": "/photos/balkans/santorini-caldera.jpg",
@@ -342,7 +345,7 @@
       "heading": "Ferry to Athens",
       "bullets": [
         "Ferry from Santorini to Piraeus",
-        "Evening at the Acropolis"
+        "At the Acropolis by 7 pm"
       ],
       "image": {
         "src": "/photos/balkans/acropolis-erechtheion.jpg",
@@ -580,36 +583,85 @@
           15.746
         ],
         [
-          43.74,
-          15.72
+          43.735,
+          15.75
+        ],
+        [
+          43.71,
+          15.78
         ],
         [
           43.7,
-          15.7
+          15.83
         ],
         [
-          43.66,
-          15.62
+          43.715,
+          15.865
         ],
         [
-          43.72,
-          15.5
+          43.728,
+          15.88
         ],
         [
-          43.78,
-          15.38
+          43.735,
+          15.89
         ],
         [
-          43.83,
-          15.47
+          43.75,
+          15.88
         ],
         [
           43.775,
-          15.6
+          15.86
         ],
         [
-          43.76,
-          15.7
+          43.795,
+          15.905
+        ],
+        [
+          43.817,
+          15.923
+        ]
+      ]
+    },
+    {
+      "mode": "boat",
+      "path": [
+        [
+          43.817,
+          15.923
+        ],
+        [
+          43.795,
+          15.905
+        ],
+        [
+          43.775,
+          15.86
+        ],
+        [
+          43.75,
+          15.88
+        ],
+        [
+          43.735,
+          15.89
+        ],
+        [
+          43.728,
+          15.88
+        ],
+        [
+          43.715,
+          15.865
+        ],
+        [
+          43.7,
+          15.8
+        ],
+        [
+          43.73,
+          15.75
         ],
         [
           43.752,
@@ -1448,6 +1500,13 @@
         15.746
       ],
       "anchor": "end"
+    },
+    {
+      "name": "Krka",
+      "coords": [
+        43.805,
+        15.963
+      ]
     },
     {
       "name": "Hvar",
