@@ -1,0 +1,30 @@
+{
+  "placeholder": true,
+  "slug": "red-sea-reefs",
+  "title": "Brothers & Daedalus",
+  "subtitle": "A week underwater in the Red Sea",
+  "type": "dive",
+  "country": "Egypt",
+  "region": "Red Sea",
+  "coords": [26.3, 34.8],
+  "date": "2022-10-20",
+  "days": 7,
+  "distanceKm": 410,
+  "elevationGainM": 0,
+  "highestPointM": 0,
+  "maxDepthM": 32,
+  "nights": 7,
+  "nightsOutside": 7,
+  "palette": "ocean",
+  "cover": { "src": "", "alt": "Diver above a coral wall" },
+  "route": [[26.1,34.28],[26.32,34.85],[25.15,35.15],[24.92,35.87],[25.5,35.2],[26.1,34.28]],
+  "elevation": [0,-18,-30,-24,-32,-12,-28,-20,0],
+  "chapters": [
+    { "heading": "Wall of colour", "body": "Soft coral in every shade a crayon box can't name. We drifted along the Brothers' wall and let the current do the work.", "image": { "src": "", "alt": "Coral reef wall", "caption": "Big Brother, north plateau." } },
+    { "heading": "The shark dive", "body": "An oceanic whitetip circled us at 18 metres, curious and unhurried. Fear for five seconds, then pure wonder.", "image": { "src": "", "alt": "Shark silhouette in blue water", "caption": "Daedalus Reef." } }
+  ],
+  "gallery": [
+    { "src": "", "alt": "Shipwreck covered in coral", "caption": "Numidia wreck" },
+    { "src": "", "alt": "Sunset from the boat deck", "caption": "Liveaboard sunsets" }
+  ]
+}

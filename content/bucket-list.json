@@ -1,0 +1,7 @@
+[
+  { "title": "Annapurna Circuit", "country": "Nepal", "coords": [28.6, 84.0], "type": "hike", "when": "2027", "note": "Three weeks, one big pass, Thorong La at 5,416 m." },
+  { "title": "Svalbard by ski", "country": "Norway", "coords": [78.2, 15.6], "type": "expedition", "when": "Someday", "note": "Polar light, sea ice, and polar-bear watch." },
+  { "title": "Torres del Paine W Trek", "country": "Chile", "coords": [-50.9, -73.0], "type": "hike", "when": "2027", "note": "Granite towers and the wind everyone warns you about." },
+  { "title": "Raja Ampat liveaboard", "country": "Indonesia", "coords": [-0.5, 130.5], "type": "dive", "when": "Someday", "note": "The most biodiverse reef on the planet." },
+  { "title": "Kilimanjaro, Machame route", "country": "Tanzania", "coords": [-3.07, 37.35], "type": "climb", "when": "2028", "note": "Sunrise from the roof of Africa." }
+]

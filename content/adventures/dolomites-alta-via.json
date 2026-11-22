@@ -1,0 +1,32 @@
+{
+  "placeholder": true,
+  "slug": "dolomites-alta-via",
+  "title": "Alta Via 1",
+  "subtitle": "Ten days hut to hut through the pale mountains",
+  "type": "hike",
+  "country": "Italy",
+  "region": "Dolomites",
+  "coords": [46.55, 12.05],
+  "date": "2024-07-08",
+  "days": 10,
+  "distanceKm": 120,
+  "elevationGainM": 7300,
+  "highestPointM": 2752,
+  "nights": 9,
+  "nightsOutside": 0,
+  "palette": "dusk",
+  "cover": { "src": "", "alt": "Limestone spires at sunset" },
+  "route": [[46.69,12.07],[46.66,12.04],[46.62,12.02],[46.58,12.0],[46.55,12.03],[46.52,12.06],[46.48,12.08],[46.44,12.06],[46.4,12.1],[46.36,12.14],[46.31,12.16],[46.27,12.13],[46.24,12.17]],
+  "elevation": [1495,2100,2340,2050,2560,2200,2752,2400,1900,2300,2050,1650,1200,900],
+  "chapters": [
+    { "heading": "Lago di Braies, 6 a.m.", "body": "The lake was glass and the crowds were still asleep. I shouldered a pack that felt far too heavy and started up toward the first rifugio, already second-guessing the third pair of socks.", "image": { "src": "", "alt": "A turquoise lake under cliffs", "caption": "Lago di Braies before the day-trippers." } },
+    { "heading": "Hut life", "body": "Strudel at 2,300 metres. Strangers sharing wine at long wooden tables. Every rifugio had a different smell of woodsmoke and boot leather, and every one felt like home within an hour.", "image": { "src": "", "alt": "A mountain hut glowing at dusk", "caption": "Rifugio Lagazuoi, the highest bed of the trip." } },
+    { "heading": "The via ferrata day", "body": "Cables bolted into rock, a drop that went on longer than my nerve. It was the hardest, best morning of the route, and the one I still dream about.", "image": { "src": "", "alt": "Climber on a ladder against a cliff face", "caption": "Clipped in and not looking down." } },
+    { "heading": "Coming down to Belluno", "body": "The last day was all knees and gratitude. The valley floor felt impossibly flat, and I missed the mountains before I had even left them.", "image": { "src": "", "alt": "A green valley at golden hour", "caption": "The long descent." } }
+  ],
+  "gallery": [
+    { "src": "", "alt": "Tre Cime silhouetted", "caption": "Tre Cime from the north" },
+    { "src": "", "alt": "Clouds rolling through a pass", "caption": "Forcella Lagazuoi" },
+    { "src": "", "alt": "Wildflowers on a ridge", "caption": "July flowers" }
+  ]
+}
