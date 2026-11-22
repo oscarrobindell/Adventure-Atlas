@@ -55,7 +55,7 @@ export default function Timeline({ adventures }: { adventures: Adventure[] }) {
                 {newYear && <p className="display text-[22vh] text-transparent [-webkit-text-stroke:1px_rgba(239,233,223,.35)] select-none">{a.date.slice(0, 4)}</p>}
                 <Link href={`/adventures/${a.slug}/`} className={`group block w-[72vw] md:w-[32vw] ${i % 2 ? "self-end mb-[6vh]" : "self-start mt-[4vh]"}`}>
                   <div className="aspect-[4/3] overflow-hidden"><div className="w-full h-full transition-transform duration-[1.4s] group-hover:scale-105"><Photo img={a.cover} palette={a.palette} seed={a.slug} /></div></div>
-                  <p className="eyebrow mt-4" style={{ color: palettes[a.palette].accent }}>{new Date(a.date).toLocaleDateString("en-US", { month: "short", year: "numeric" })} · {typeLabel[a.type]}</p>
+                  <p className="eyebrow mt-4" style={{ color: palettes[a.palette].accent }}>{new Date(a.date).toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" })} · {typeLabel[a.type]}</p>
                   <p className="display text-4xl md:text-5xl mt-2">{a.title}</p>
                   <p className="text-mist text-sm mt-1">{place(a)} · {a.days} days · {a.distanceKm.toLocaleString("en-US")} km</p>
                 </Link>

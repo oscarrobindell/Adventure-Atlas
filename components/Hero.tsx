@@ -11,13 +11,13 @@ export default function Hero({ pins, journey, items, name, intro, countries }: {
   const [hover, setHover] = useState<string | null>(null);
   const ease = [0.16, 1, 0.3, 1] as const;
   return (
-    <section className="relative h-[100svh] min-h-[640px] overflow-hidden">
+    <section className="relative min-h-[100svh] overflow-hidden">
       <div className="absolute inset-0 top-[30%] opacity-50 md:opacity-100 md:top-0 md:left-[28%]">
         <Globe pins={pins} journey={journey} focus={focus} onHover={setHover} />
       </div>
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_70%_50%,transparent_30%,#07090b_80%)]" />
 
-      <div className="relative z-10 h-full px-6 md:px-12 pt-28 pb-10 flex flex-col justify-between pointer-events-none">
+      <div className="relative z-10 min-h-[100svh] px-6 md:px-12 pt-28 pb-16 flex flex-col justify-between gap-12 pointer-events-none">
         <div>
           <motion.p className="eyebrow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, duration: 1 }}>
             {items.length} adventures · {countries} countries

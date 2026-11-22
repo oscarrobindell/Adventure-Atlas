@@ -43,7 +43,7 @@ export default function AdventureStory({ a, next, map, minis = [] }: { a: Advent
         <motion.div className="absolute inset-0" style={{ y, scale }}><Photo img={a.cover} palette={a.palette} seed={a.slug} priority /></motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-transparent to-ink" />
         <motion.div style={{ opacity: fade }} className="absolute inset-x-0 bottom-0 px-6 md:px-12 pb-16">
-          <p className="eyebrow" style={{ color: p.accent }}>{typeLabel[a.type] ?? a.type} · {place(a)} · {new Date(a.date).toLocaleDateString("en-US", { month: "long", year: "numeric" })}</p>
+          <p className="eyebrow" style={{ color: p.accent }}>{typeLabel[a.type] ?? a.type} · {place(a)} · {new Date(a.date).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" })}</p>
           <h1 className="display text-[19vw] md:text-[13vw] mt-3">{a.title}</h1>
           <p className="font-display italic text-2xl md:text-4xl text-bone/80 mt-2 max-w-3xl">{a.subtitle}</p>
           {a.placeholder && <p className="mt-6 inline-block eyebrow border border-dashed border-bone/30 px-3 py-1">Placeholder story · swap in your own</p>}
