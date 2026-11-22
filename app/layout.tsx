@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
-import { getProfile } from "@/lib/content";
+import { getGear, getProfile } from "@/lib/content";
 
 const profile = getProfile();
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[70] focus:bg-bone focus:text-ink focus:px-3 focus:py-2">Skip to content</a>
-        <Nav name={profile.name} />
+        <Nav name={profile.name} gear={getGear().brands.length > 0} />
         <main id="main">{children}</main>
         <footer className="border-t hairline px-6 md:px-12 py-16 mt-32 flex flex-col md:flex-row gap-8 justify-between">
           <div>

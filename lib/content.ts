@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { Adventure, BucketItem, Profile } from "./types";
+import type { Adventure, BucketItem, Gear, Profile } from "./types";
 
 const root = path.join(process.cwd(), "content");
 const read = <T,>(p: string): T => JSON.parse(fs.readFileSync(path.join(root, p), "utf8"));
@@ -17,6 +17,7 @@ export function getAdventures(): Adventure[] {
 export const getAdventure = (slug: string) => getAdventures().find((a) => a.slug === slug);
 export const getBucketList = () => read<BucketItem[]>("bucket-list.json");
 export const getProfile = () => read<Profile>("profile.json");
+export const getGear = () => read<Gear>("gear.json");
 
 export function getStats(list = getAdventures()) {
   return {

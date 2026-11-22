@@ -61,3 +61,7 @@ export type MiniMapSpec = {
   legs?: { mode: string; path: [number, number][] }[];
   stops: { name: string; coords: [number, number]; anchor?: "start" | "end" }[];
 };
+
+export type GearItem = { name: string; href: string; note?: string };
+export type GearBrand = { name: string; href: string; code?: string; codeNote?: string; note?: string; items: GearItem[] };
+export type Gear = { intro: string; brands: GearBrand[] };

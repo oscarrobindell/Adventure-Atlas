@@ -2,14 +2,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
+const base = [
   { href: "/", label: "Home" },
   { href: "/timeline/", label: "Timeline" },
   { href: "/gallery/", label: "Gallery" },
 ];
 
-export default function Nav({ name }: { name: string }) {
+export default function Nav({ name, gear = false }: { name: string; gear?: boolean }) {
   const path = usePathname();
+  const links = gear ? [...base, { href: "/gear/", label: "Gear" }] : base;
   return (
     <header className="fixed top-0 inset-x-0 z-50 px-6 md:px-12 py-5 flex items-center justify-between mix-blend-difference">
       <Link href="/" className="font-display text-xl tracking-tight italic">{name}<span className="not-italic text-ember">.</span></Link>
