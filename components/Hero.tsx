@@ -22,7 +22,7 @@ export default function Hero({ pins, journey, items, name, intro }: { pins: Glob
           <motion.p className="eyebrow" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, duration: 1 }}>
             {items.length} adventures · {new Set(items.map((i) => i.country)).size} countries
           </motion.p>
-          <h1 className="display text-[18vw] md:text-[10.5vw] mt-4">
+          <h1 className="display text-[18vw] md:text-[8.6vw] mt-4">
             {["A life", "on the move."].map((line, i) => (
               <span key={i} className="block overflow-hidden pb-[0.08em]">
                 <motion.span className={`block ${i === 1 ? "italic text-ember" : ""}`} initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ delay: 0.3 + i * 0.12, duration: 1.2, ease }}>
